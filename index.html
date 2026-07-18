@@ -1,0 +1,5138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Imtiyaz &amp; Aalia — Wedding Invitation</title>
+  <link rel="icon" type="image/png" href="img/ia.jpg">
+ 
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Allura&family=Cormorant+Garamond:ital,wght@0,400;0,600;1,400&family=Great+Vibes&family=Nunito:wght@400;600;700;800&family=Playfair+Display:ital,wght@0,400;0,600;1,400&display=swap" rel="stylesheet">
+<style>
+  /* ============================================
+   Shamim Aliya Sites - Global Styles
+   Use for shared reset, variables, and bas
+   ============================================ */
+
+/* Simple reset */
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  font-size: 16px;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  height: 100vh;
+  height: 100dvh;
+  max-height: 100vh;
+  max-height: 100dvh;
+  overflow: hidden;
+  -webkit-tap-highlight-color: transparent;
+  tap-highlight-color: transparent;
+}
+
+body {
+  min-height: 100vh;
+  min-height: 100dvh;
+  height: 100%;
+  max-height: 100vh;
+  max-height: 100dvh;
+  overflow: hidden;
+  overflow-x: hidden;
+  font-family: var(--font-body, 'Georgia', serif);
+  color: var(--text-primary, #fff);
+  background-color: var(--bg-primary, #1a0a0a);
+}
+
+/* Global variables - clients can override in their own CSS */
+:root {
+  --font-body: 'Georgia', 'Times New Roman', serif;
+  --font-display: 'Georgia', serif;
+  --text-primary: #ffffff;
+  --text-secondary: rgba(255, 255, 255, 0.85);
+  --bg-primary: #1a0a0a;
+  --accent: #e91e63;
+  --accent-soft: rgba(233, 30, 99, 0.3);
+}
+
+/* Utility: hide when needed (e.g. before answer) */
+.u-hidden {
+  display: none !important;
+}
+
+.u-no-pointer {
+  pointer-events: none;
+}
+
+
+/* Wedding Template T2 — pastel & red envelope invitation */
+
+html,
+body {
+  --wed2-bg: #faf3f0;
+  --wed2-pastel-blush: #f5e6e4;
+  --wed2-pastel-rose: #fde8e8;
+  --wed2-pastel-cream: #fff9f5;
+  --wed2-red: #8b2942;
+  --wed2-red-soft: #c45c6a;
+  --wed2-red-deep: #6b1d32;
+  --wed2-gold: #c9a86c;
+  --wed2-text: #4a2c32;
+  --wed2-text-soft: #7a5a60;
+  --wed2-paper: #fffaf8;
+  margin: 0;
+  min-height: 100vh;
+  height: auto;
+  max-height: none;
+  overflow: hidden;
+  background: var(--wed2-bg);
+  color: var(--wed2-text);
+  font-family: 'Cormorant Garamond', Georgia, serif;
+}
+
+.wed2-page {
+  position: relative;
+  min-height: 100vh;
+  min-height: 100dvh;
+}
+
+.wed2-style-picker {
+  display: none;
+  position: fixed;
+  inset: 0;
+  z-index: 1000;
+  align-items: center;
+  justify-content: center;
+  padding: 1.5rem;
+  background:
+    radial-gradient(circle at top, #fff9f5 0%, var(--wed2-pastel-blush) 45%, var(--wed2-bg) 100%);
+}
+
+.wed2-style-picker.is-active {
+  display: flex;
+  animation: wed2FadeIn 0.45s ease both;
+}
+
+@keyframes wed2FadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+.wed2-style-picker-card {
+  width: min(92vw, 24rem);
+  padding: 2rem 1.6rem 1.75rem;
+  text-align: center;
+  background: linear-gradient(180deg, var(--wed2-paper) 0%, #fff3ef 100%);
+  border: 1px solid rgba(196, 92, 106, 0.28);
+  box-shadow: 0 18px 40px rgba(74, 44, 50, 0.12);
+}
+
+.wed2-style-picker-title {
+  margin: 0;
+  font-family: 'Playfair Display', serif;
+  font-size: clamp(1.55rem, 5vw, 1.9rem);
+  font-weight: 600;
+  color: var(--wed2-text);
+  letter-spacing: 0.02em;
+}
+
+.wed2-style-picker-sub {
+  margin: 0.65rem 0 0;
+  font-family: 'Nunito', sans-serif;
+  font-size: 0.84rem;
+  line-height: 1.45;
+  color: var(--wed2-text-soft);
+}
+
+.wed2-style-picker-actions {
+  display: flex;
+  flex-direction: column;
+  gap: 0.7rem;
+  margin-top: 1.5rem;
+}
+
+.wed2-style-picker-btn {
+  appearance: none;
+  border: 1px solid rgba(139, 41, 66, 0.35);
+  background: rgba(255, 250, 248, 0.95);
+  color: var(--wed2-red);
+  font-family: 'Nunito', sans-serif;
+  font-size: 0.95rem;
+  font-weight: 700;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  padding: 0.85rem 1rem;
+  cursor: pointer;
+  transition: background 0.2s ease, color 0.2s ease, border-color 0.2s ease, transform 0.2s ease;
+}
+
+.wed2-style-picker-btn:hover,
+.wed2-style-picker-btn:focus-visible {
+  background: var(--wed2-red);
+  border-color: var(--wed2-red);
+  color: #fffaf8;
+  outline: none;
+}
+
+.wed2-style-picker-btn:active {
+  transform: translateY(1px);
+}
+
+/* ── Sessions ── */
+.wed2-session {
+  display: none;
+  min-height: 100vh;
+  min-height: 100dvh;
+}
+
+.wed2-session.is-active {
+  display: block;
+}
+
+.wed2-session-cover.is-active {
+  position: fixed;
+  inset: 0;
+  z-index: 100;
+  overflow: hidden;
+}
+
+.wed2-session-cover.is-fading {
+  position: fixed;
+  inset: 0;
+  z-index: 100;
+  pointer-events: none;
+}
+
+.wed2-session-invite.is-active {
+  overflow-y: auto;
+  overflow-x: hidden;
+  -webkit-overflow-scrolling: touch;
+  height: 100vh;
+  height: 100dvh;
+}
+
+.wed2-session-invite.is-active.is-scroll-locked {
+  overflow: hidden;
+  overscroll-behavior: none;
+  touch-action: none;
+}
+
+/* Rose petals — slow ambient fall after hero intro */
+.wed2-petals {
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+  z-index: 12;
+  overflow: hidden;
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 1.2s ease, visibility 1.2s ease;
+}
+
+.wed2-petals.is-active {
+  opacity: 1;
+  visibility: visible;
+}
+
+.wed2-petal {
+  position: absolute;
+  top: -8vh;
+  border-radius: 50% 50% 50% 0;
+  box-shadow: inset -1px -1px 2px rgba(255, 255, 255, 0.28);
+  opacity: 0;
+  animation: wed2PetalFall linear infinite;
+  will-change: transform, opacity;
+}
+
+@keyframes wed2PetalFall {
+  0% {
+    transform: translate3d(0, -8vh, 0) rotate(0deg);
+    opacity: 0;
+  }
+  6% {
+    opacity: var(--petal-opacity, 0.72);
+  }
+  22% {
+    transform: translate3d(calc(var(--petal-drift) * 0.28), 22vh, 0) rotate(calc(var(--petal-spin) * 0.22));
+  }
+  48% {
+    transform: translate3d(calc(var(--petal-drift) * 0.58), 48vh, 0) rotate(calc(var(--petal-spin) * 0.5));
+  }
+  74% {
+    transform: translate3d(calc(var(--petal-drift) * 0.82), 74vh, 0) rotate(calc(var(--petal-spin) * 0.76));
+  }
+  94% {
+    opacity: var(--petal-opacity, 0.72);
+  }
+  100% {
+    transform: translate3d(var(--petal-drift), 108vh, 0) rotate(var(--petal-spin));
+    opacity: 0;
+  }
+}
+
+/* ── Cover: folded paper envelope (Session 1) ── */
+.wed2-envelope-scene {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  height: 100dvh;
+  display: flex;
+  align-items: stretch;
+  justify-content: stretch;
+  padding: 0;
+  box-sizing: border-box;
+  overflow: hidden;
+  background:
+    radial-gradient(ellipse at 50% 20%, rgba(255, 255, 255, 0.7), transparent 50%),
+    radial-gradient(ellipse at 15% 85%, var(--wed2-pastel-rose), transparent 38%),
+    linear-gradient(180deg, var(--wed2-pastel-cream) 0%, var(--wed2-bg) 100%);
+  transition: opacity 0.5s ease 0.6s;
+}
+
+.wed2-envelope-scene.is-fading {
+  opacity: 0;
+  pointer-events: none;
+}
+
+/* Hanging tassel — top left, pull to open */
+.wed2-tassel {
+  --tassel-pull: 0px;
+  position: absolute;
+  top: 0;
+  left: clamp(1rem, 5vw, 2rem);
+  z-index: 20;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  pointer-events: auto;
+  touch-action: none;
+  cursor: grab;
+  -webkit-user-select: none;
+  user-select: none;
+  transform-origin: top center;
+  transition: filter 0.25s ease;
+  animation: wed2TasselSway 5s ease-in-out infinite;
+}
+
+.wed2-tassel:focus-visible {
+  outline: 2px solid var(--wed2-red-soft);
+  outline-offset: 4px;
+}
+
+.wed2-tassel.is-dragging {
+  animation: none;
+  cursor: grabbing;
+  transform: rotate(2deg);
+}
+
+.wed2-tassel.is-near-open {
+  filter: drop-shadow(0 4px 14px rgba(139, 41, 66, 0.35));
+}
+
+.wed2-tassel.is-opening {
+  animation: none;
+  pointer-events: none;
+}
+
+.wed2-tassel.is-dragging .wed2-tassel-thread {
+  animation: none;
+}
+
+.wed2-tassel-string {
+  display: block;
+  width: 1.5px;
+  height: calc(clamp(32px, 5.5vh, 48px) + var(--tassel-pull, 0px));
+  background: linear-gradient(180deg, var(--wed2-red-deep) 0%, #5a1528 100%);
+  border-radius: 1px;
+  box-shadow: 0 1px 2px rgba(60, 15, 30, 0.2);
+  transition: height 0.35s cubic-bezier(0.34, 1.25, 0.64, 1);
+}
+
+.wed2-tassel.is-dragging .wed2-tassel-string {
+  transition: none;
+}
+
+@keyframes wed2TasselSway {
+  0%, 100% { transform: rotate(-2deg); }
+  50% { transform: rotate(3deg); }
+}
+
+.wed2-tassel-cap {
+  display: block;
+  width: 14px;
+  height: 10px;
+  margin-top: -1px;
+  background: linear-gradient(180deg, #7a1f38 0%, #5a1528 100%);
+  border-radius: 3px 3px 1px 1px;
+  box-shadow: 0 2px 4px rgba(60, 15, 30, 0.25);
+}
+
+.wed2-tassel-fringes {
+  display: block;
+  padding: 3px 2px 0;
+  margin-top: -1px;
+  background: linear-gradient(180deg, #6b1d32 0%, #5a1528 35%, #4a1222 100%);
+  border-radius: 0 0 4px 4px;
+  box-shadow: 0 4px 12px rgba(60, 15, 30, 0.22);
+}
+
+.wed2-tassel-ropes {
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+  gap: 1px;
+  flex-wrap: nowrap;
+}
+
+.wed2-tassel-thread {
+  display: block;
+  flex-shrink: 0;
+  width: 1px;
+  height: var(--rope-len, 52px);
+  background: linear-gradient(
+    180deg,
+    #7a1f38 0%,
+    #6b1d32 25%,
+    #5a1528 70%,
+    #3d0f1a 100%
+  );
+  border-radius: 0 0 1px 1px;
+  transform-origin: top center;
+  transform: rotate(var(--rope-tilt, 0deg));
+  animation: wed2RopeSway 4.5s ease-in-out infinite;
+  animation-delay: var(--rope-delay, 0s);
+}
+
+.wed2-tassel-thread:nth-child(1)  { --rope-len: clamp(38px, 5.5vh, 48px); --rope-tilt: -4deg;   --rope-delay: 0s; }
+.wed2-tassel-thread:nth-child(2)  { --rope-len: clamp(42px, 6vh, 54px);   --rope-tilt: -3deg;   --rope-delay: 0.15s; }
+.wed2-tassel-thread:nth-child(3)  { --rope-len: clamp(40px, 5.8vh, 50px); --rope-tilt: -2deg;   --rope-delay: 0.3s; }
+.wed2-tassel-thread:nth-child(4)  { --rope-len: clamp(46px, 6.5vh, 58px); --rope-tilt: -1deg;   --rope-delay: 0.1s; }
+.wed2-tassel-thread:nth-child(5)  { --rope-len: clamp(42px, 6vh, 52px);   --rope-tilt: -0.5deg; --rope-delay: 0.25s; }
+.wed2-tassel-thread:nth-child(6)  { --rope-len: clamp(48px, 6.8vh, 60px); --rope-tilt: 0deg;    --rope-delay: 0.05s; }
+.wed2-tassel-thread:nth-child(7)  { --rope-len: clamp(46px, 6.5vh, 56px); --rope-tilt: 0.5deg;  --rope-delay: 0.2s; }
+.wed2-tassel-thread:nth-child(8)  { --rope-len: clamp(50px, 7vh, 62px);   --rope-tilt: 0deg;    --rope-delay: 0.35s; }
+.wed2-tassel-thread:nth-child(9)  { --rope-len: clamp(48px, 6.8vh, 58px); --rope-tilt: 1deg;    --rope-delay: 0.12s; }
+.wed2-tassel-thread:nth-child(10) { --rope-len: clamp(52px, 7.2vh, 66px); --rope-tilt: 0deg;    --rope-delay: 0.28s; }
+.wed2-tassel-thread:nth-child(11) { --rope-len: clamp(48px, 6.8vh, 60px); --rope-tilt: 1deg;    --rope-delay: 0.08s; }
+.wed2-tassel-thread:nth-child(12) { --rope-len: clamp(46px, 6.5vh, 56px); --rope-tilt: 0.5deg;  --rope-delay: 0.22s; }
+.wed2-tassel-thread:nth-child(13) { --rope-len: clamp(44px, 6.2vh, 54px); --rope-tilt: 0deg;    --rope-delay: 0.18s; }
+.wed2-tassel-thread:nth-child(14) { --rope-len: clamp(40px, 5.8vh, 50px); --rope-tilt: -0.5deg; --rope-delay: 0.32s; }
+.wed2-tassel-thread:nth-child(15) { --rope-len: clamp(42px, 6vh, 52px);   --rope-tilt: -1deg;   --rope-delay: 0.14s; }
+.wed2-tassel-thread:nth-child(16) { --rope-len: clamp(38px, 5.5vh, 48px); --rope-tilt: -2deg;   --rope-delay: 0.26s; }
+.wed2-tassel-thread:nth-child(17) { --rope-len: clamp(36px, 5.2vh, 44px); --rope-tilt: -2.5deg; --rope-delay: 0.1s; }
+.wed2-tassel-thread:nth-child(18) { --rope-len: clamp(40px, 5.8vh, 50px); --rope-tilt: -3deg;   --rope-delay: 0.24s; }
+.wed2-tassel-thread:nth-child(19) { --rope-len: clamp(34px, 5vh, 42px);   --rope-tilt: -4deg;   --rope-delay: 0.16s; }
+
+@keyframes wed2RopeSway {
+  0%, 100% { transform: rotate(var(--rope-tilt, 0deg)) translateX(0); }
+  50% { transform: rotate(calc(var(--rope-tilt, 0deg) + 2deg)) translateX(1px); }
+}
+
+.wed2-envelope {
+  --wed2-seal-top: 50%;
+  position: relative;
+  width: 100%;
+  height: 100%;
+  flex: 1;
+  min-height: 0;
+  perspective: 1400px;
+  filter: drop-shadow(0 12px 32px rgba(107, 29, 50, 0.15));
+  overflow: visible;
+}
+
+/* Envelope body (back) */
+.wed2-envelope-back {
+  position: absolute;
+  inset: 0;
+  border-radius: 0;
+  background:
+    repeating-linear-gradient(
+      0deg,
+      transparent,
+      transparent 4px,
+      rgba(139, 41, 66, 0.02) 4px,
+      rgba(139, 41, 66, 0.02) 5px
+    ),
+    linear-gradient(175deg, #fffdf9 0%, var(--wed2-pastel-blush) 100%);
+  border: 1px solid rgba(139, 41, 66, 0.18);
+  z-index: 1;
+  box-shadow: inset 0 0 50px rgba(139, 41, 66, 0.05);
+}
+
+/* Bottom triangular fold */
+.wed2-envelope-fold-bottom {
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  height: 52%;
+  z-index: 2;
+  pointer-events: none;
+  background: linear-gradient(180deg, #faf5f0 0%, #f0e4dc 100%);
+  clip-path: polygon(0 0, 100% 0, 50% 100%);
+  box-shadow: inset 0 8px 16px rgba(139, 41, 66, 0.04);
+  transition: opacity 0.5s ease 0.35s;
+}
+
+.wed2-envelope-fold-bottom::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(180deg, transparent 30%, rgba(139, 41, 66, 0.05) 100%);
+  clip-path: polygon(0 0, 100% 0, 50% 100%);
+}
+
+/* Side flaps — folded paper triangles */
+.wed2-envelope-panel {
+  position: absolute;
+  top: 0;
+  width: 52%;
+  height: 100%;
+  overflow: visible;
+  transition: transform 1.05s cubic-bezier(0.4, 0, 0.2, 1);
+  z-index: 4;
+}
+
+.wed2-envelope-panel-left {
+  left: 0;
+  transform-origin: right center;
+}
+
+.wed2-envelope-panel-right {
+  right: 0;
+  transform-origin: left center;
+}
+
+.wed2-panel-inner {
+  display: block;
+  position: relative;
+  width: 100%;
+  height: 100%;
+  background:
+    repeating-linear-gradient(
+      92deg,
+      transparent,
+      transparent 5px,
+      rgba(139, 41, 66, 0.018) 5px,
+      rgba(139, 41, 66, 0.018) 6px
+    ),
+    linear-gradient(155deg, #fffefb 0%, #f7ece4 55%, #efe2d8 100%);
+  box-shadow: 0 2px 12px rgba(107, 29, 50, 0.08);
+}
+
+.wed2-envelope-panel-left .wed2-panel-inner {
+  clip-path: polygon(0 0, 100% 50%, 0 100%);
+  filter: drop-shadow(2px 0 6px rgba(107, 29, 50, 0.1));
+}
+
+.wed2-envelope-panel-right .wed2-panel-inner {
+  clip-path: polygon(100% 0, 0 50%, 100% 100%);
+  filter: drop-shadow(-2px 0 6px rgba(107, 29, 50, 0.1));
+}
+
+/* Fold crease lines on flaps */
+.wed2-envelope-panel-left .wed2-panel-inner::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(118deg, transparent 46%, rgba(107, 29, 50, 0.09) 49.5%, transparent 53%);
+  clip-path: polygon(0 0, 100% 50%, 0 100%);
+  pointer-events: none;
+}
+
+.wed2-envelope-panel-right .wed2-panel-inner::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(242deg, transparent 46%, rgba(107, 29, 50, 0.09) 49.5%, transparent 53%);
+  clip-path: polygon(100% 0, 0 50%, 100% 100%);
+  pointer-events: none;
+}
+
+/* Outer edge lip on flaps */
+.wed2-envelope-panel-left .wed2-panel-inner::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  width: 3px;
+  background: linear-gradient(180deg, rgba(139, 41, 66, 0.12), rgba(139, 41, 66, 0.28), rgba(139, 41, 66, 0.12));
+  clip-path: polygon(0 0, 100% 50%, 0 100%);
+}
+
+.wed2-envelope-panel-right .wed2-panel-inner::before {
+  content: '';
+  position: absolute;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  width: 3px;
+  background: linear-gradient(180deg, rgba(139, 41, 66, 0.12), rgba(139, 41, 66, 0.28), rgba(139, 41, 66, 0.12));
+  clip-path: polygon(100% 0, 0 50%, 100% 100%);
+}
+
+.wed2-envelope-crease {
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 1px;
+  height: 100%;
+  background: linear-gradient(
+    180deg,
+    rgba(107, 29, 50, 0.08) 0%,
+    rgba(107, 29, 50, 0.22) 45%,
+    rgba(107, 29, 50, 0.22) 55%,
+    rgba(107, 29, 50, 0.08) 100%
+  );
+  z-index: 5;
+  pointer-events: none;
+  transition: opacity 0.4s ease 0.3s;
+}
+
+/* Dark red monogram seal */
+.wed2-seal {
+  position: absolute;
+  left: 50%;
+  top: var(--wed2-seal-top);
+  transform: translate(-50%, -50%);
+  width: clamp(108px, 26vw, 136px);
+  height: clamp(108px, 26vw, 136px);
+  border: none;
+  border-radius: 50%;
+  cursor: pointer;
+  z-index: 10;
+  padding: 0;
+  background:
+    radial-gradient(circle at 32% 26%, #9e2d4a 0%, #7a1f38 38%, #5a1528 72%, #3d0f1a 100%);
+  box-shadow:
+    0 0 0 3px rgba(139, 41, 66, 0.55),
+    0 0 0 6px rgba(201, 168, 108, 0.22),
+    0 12px 28px rgba(60, 15, 30, 0.45),
+    inset 0 2px 5px rgba(220, 140, 150, 0.25),
+    inset 0 -5px 12px rgba(30, 8, 15, 0.55);
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.wed2-seal:hover {
+  transform: translate(-50%, -50%) scale(1.04);
+  box-shadow:
+    0 0 0 3px rgba(139, 41, 66, 0.65),
+    0 0 0 6px rgba(201, 168, 108, 0.28),
+    0 16px 34px rgba(60, 15, 30, 0.5),
+    inset 0 2px 5px rgba(220, 140, 150, 0.25),
+    inset 0 -5px 12px rgba(30, 8, 15, 0.55);
+}
+
+.wed2-seal:active:not(.is-falling) {
+  transform: translate(-50%, -50%) scale(0.97);
+}
+
+.wed2-seal-ring {
+  position: absolute;
+  inset: 11%;
+  border: 2px solid rgba(255, 210, 215, 0.28);
+  border-radius: 50%;
+  pointer-events: none;
+}
+
+.wed2-seal-ring::before {
+  content: '';
+  position: absolute;
+  inset: 5px;
+  border: 1px dashed rgba(255, 210, 215, 0.2);
+  border-radius: 50%;
+}
+
+.wed2-seal-monogram {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 100%;
+  padding: 0.5rem;
+  text-align: center;
+  pointer-events: none;
+}
+
+.wed2-seal-line {
+  font-family: 'Great Vibes', cursive;
+  font-size: clamp(1.3rem, 4.5vw, 1.6rem);
+  line-height: 0.95;
+  color: #fce8ec;
+  text-shadow: 0 1px 3px rgba(30, 8, 15, 0.55);
+}
+
+.wed2-seal-line-small {
+  font-size: clamp(0.9rem, 3.2vw, 1.05rem);
+  opacity: 0.95;
+  margin: 0.05rem 0;
+}
+
+.wed2-seal.is-initials .wed2-seal-initials {
+  font-family: 'Great Vibes', cursive;
+  font-size: clamp(2.1rem, 8vw, 2.75rem);
+  line-height: 1;
+  color: #fce8ec;
+  letter-spacing: 0.06em;
+  text-shadow: 0 1px 3px rgba(30, 8, 15, 0.55);
+}
+
+.wed2-seal.is-falling {
+  animation: wed2SealFall 1s cubic-bezier(0.55, 0.08, 0.68, 0.53) forwards;
+  pointer-events: none;
+}
+
+@keyframes wed2SealFall {
+  0% {
+    transform: translate(-50%, -50%) rotate(0deg);
+    opacity: 1;
+  }
+  35% {
+    transform: translate(-50%, -15%) rotate(6deg);
+    opacity: 1;
+  }
+  100% {
+    transform: translate(-50%, 130vh) rotate(22deg);
+    opacity: 0;
+  }
+}
+
+.wed2-envelope-scene.is-fading .wed2-tassel {
+  opacity: 0;
+  transition: opacity 0.4s ease;
+}
+
+/* Envelope open: flaps peel apart */
+.wed2-envelope.is-open .wed2-envelope-panel-left {
+  transform: translateX(-108%) rotateY(-22deg);
+}
+
+.wed2-envelope.is-open .wed2-envelope-panel-right {
+  transform: translateX(108%) rotateY(22deg);
+}
+
+.wed2-envelope.is-open .wed2-envelope-crease,
+.wed2-envelope.is-open .wed2-envelope-fold-bottom {
+  opacity: 0;
+}
+
+/* ── Mute button ── */
+.wed2-mute-btn {
+  position: fixed;
+  top: 1rem;
+  right: 1rem;
+  z-index: 50;
+  width: 44px;
+  height: 44px;
+  border: 2px solid var(--wed2-red-soft);
+  border-radius: 50%;
+  background: rgba(255, 250, 248, 0.92);
+  font-size: 1.1rem;
+  cursor: pointer;
+  display: none;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 2px 12px rgba(139, 41, 66, 0.12);
+  transition: transform 0.2s ease;
+}
+
+.wed2-mute-btn.is-visible {
+  display: flex;
+}
+
+.wed2-mute-btn:active {
+  transform: scale(0.94);
+}
+
+/* ── Scroll page (Session 2) ── */
+.wed2-scroll-page {
+  min-height: 100vh;
+  min-height: 100dvh;
+  padding: 0 0 1rem;
+  background:
+    repeating-linear-gradient(
+      -14deg,
+      transparent,
+      transparent 13px,
+      rgba(139, 41, 66, 0.014) 13px,
+      rgba(139, 41, 66, 0.014) 14px
+    ),
+    repeating-linear-gradient(
+      0deg,
+      transparent,
+      transparent 4px,
+      rgba(160, 120, 70, 0.028) 4px,
+      rgba(160, 120, 70, 0.028) 5px
+    ),
+    radial-gradient(ellipse at 50% 0%, rgba(255, 255, 255, 0.35), transparent 55%),
+    linear-gradient(180deg, #f7ece8 0%, var(--wed2-bg) 42%, #f5e6e4 100%);
+}
+
+/* ── Hero (first screen only — full decorative layout) ── */
+.wed2-hero {
+  --wed2-bismillah-settle-top: 12%;
+  min-height: 100vh;
+  min-height: 100dvh;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  padding: 0;
+  margin: 0;
+  position: relative;
+  text-align: center;
+  overflow: hidden;
+  background:
+    radial-gradient(ellipse 90% 55% at 8% 12%, rgba(253, 232, 232, 0.75), transparent 55%),
+    radial-gradient(ellipse 70% 50% at 92% 8%, rgba(245, 220, 218, 0.65), transparent 50%),
+    radial-gradient(ellipse 80% 45% at 88% 88%, rgba(253, 228, 228, 0.55), transparent 52%),
+    radial-gradient(ellipse 65% 40% at 12% 78%, rgba(255, 240, 236, 0.7), transparent 48%),
+    radial-gradient(ellipse 50% 35% at 50% 45%, rgba(255, 252, 250, 0.9), transparent 70%),
+    linear-gradient(175deg, #fff9f6 0%, #faf3f0 30%, #f7ece8 55%, #faf3f0 100%);
+}
+
+.wed2-hero::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  z-index: 0;
+  opacity: 0.55;
+  mix-blend-mode: multiply;
+  background:
+    repeating-linear-gradient(
+      -18deg,
+      transparent,
+      transparent 12px,
+      rgba(139, 41, 66, 0.02) 12px,
+      rgba(139, 41, 66, 0.02) 13px
+    ),
+    repeating-linear-gradient(
+      72deg,
+      transparent,
+      transparent 16px,
+      rgba(201, 168, 108, 0.025) 16px,
+      rgba(201, 168, 108, 0.025) 17px
+    ),
+    repeating-linear-gradient(
+      0deg,
+      transparent,
+      transparent 3px,
+      rgba(160, 120, 70, 0.03) 3px,
+      rgba(160, 120, 70, 0.03) 4px
+    );
+}
+
+.wed2-hero-deco {
+  --wed2-border-inset: clamp(0.45rem, 1.6vw, 0.85rem);
+  --wed2-border-thick: clamp(1.1rem, 3.2vh, 1.85rem);
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  z-index: 1;
+}
+
+.wed2-code-border-fill {
+  position: absolute;
+  top: calc(var(--wed2-border-inset) + var(--wed2-border-thick));
+  right: calc(var(--wed2-border-inset) + var(--wed2-border-thick));
+  bottom: calc(var(--wed2-border-inset) + var(--wed2-border-thick));
+  left: calc(var(--wed2-border-inset) + var(--wed2-border-thick));
+  z-index: 2;
+  background:
+    radial-gradient(ellipse 70% 55% at 50% 38%, rgba(255, 253, 250, 0.95), transparent 68%),
+    radial-gradient(ellipse 45% 35% at 18% 82%, rgba(253, 236, 236, 0.35), transparent 70%),
+    radial-gradient(ellipse 40% 30% at 82% 78%, rgba(252, 232, 228, 0.28), transparent 68%),
+    linear-gradient(165deg, #fffefb 0%, #fff7f2 42%, #fffaf6 100%);
+  box-shadow:
+    inset 0 0 0 1px rgba(201, 168, 108, 0.18),
+    inset 0 8px 28px rgba(139, 41, 66, 0.04);
+}
+
+/* ── Coded floral border: bottom + right + left + top (full frame to top-right) ── */
+.wed2-hero-code-border {
+  position: absolute;
+  inset: 0;
+  z-index: 6;
+  pointer-events: none;
+}
+
+.wed2-code-frame {
+  position: absolute;
+  inset: var(--wed2-border-inset);
+  width: calc(100% - var(--wed2-border-inset) * 2);
+  height: calc(100% - var(--wed2-border-inset) * 2);
+  overflow: visible;
+}
+
+.wed2-code-frame .wed2-code-vine {
+  fill: none;
+  stroke: var(--wed2-red);
+  stroke-width: 1.35;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  opacity: 0.88;
+}
+
+.wed2-code-frame .wed2-code-vine-gold {
+  stroke: var(--wed2-gold);
+  stroke-width: 0.85;
+  opacity: 0.72;
+}
+
+.wed2-code-frame .wed2-code-flower {
+  fill: var(--wed2-red-soft);
+  opacity: 0.92;
+}
+
+.wed2-code-frame .wed2-code-leaf {
+  fill: var(--wed2-gold);
+  opacity: 0.78;
+}
+
+.wed2-code-corner-br {
+  position: absolute;
+  right: calc(var(--wed2-border-inset) * 0.15);
+  bottom: calc(var(--wed2-border-inset) * 0.15);
+  width: clamp(4.5rem, 16vw, 7.5rem);
+  height: clamp(4.5rem, 16vw, 7.5rem);
+  overflow: visible;
+}
+
+.wed2-code-corner-br .wed2-code-vine {
+  fill: none;
+  stroke: var(--wed2-red);
+  stroke-width: 1.6;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
+
+.wed2-code-corner-br .wed2-code-vine-gold {
+  stroke: var(--wed2-gold);
+  stroke-width: 1;
+  opacity: 0.8;
+}
+
+.wed2-code-corner-br .wed2-code-leaf {
+  fill: var(--wed2-gold);
+  opacity: 0.85;
+}
+
+.wed2-code-corner-br .wed2-code-flower {
+  fill: var(--wed2-red-soft);
+}
+
+.wed2-code-corner-br .wed2-code-flower-core {
+  fill: var(--wed2-red-deep);
+  opacity: 0.55;
+}
+
+.wed2-code-edge {
+  position: absolute;
+  pointer-events: none;
+  opacity: 0.55;
+}
+
+.wed2-code-edge::before,
+.wed2-code-edge::after {
+  content: '';
+  position: absolute;
+  pointer-events: none;
+}
+
+/* Repeating floral tile along each edge */
+.wed2-code-edge::before {
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='72' height='72' viewBox='0 0 72 72'%3E%3Cpath d='M0 36 Q18 30 36 36 T72 36' fill='none' stroke='%238b2942' stroke-width='1.4' stroke-linecap='round'/%3E%3Cpath d='M36 4 Q40 16 36 28' fill='none' stroke='%23b89555' stroke-width='1' stroke-linecap='round'/%3E%3Cellipse cx='20' cy='34' rx='5.5' ry='2.6' fill='%23c9a86c' transform='rotate(-28 20 34)'/%3E%3Cellipse cx='52' cy='38' rx='5' ry='2.4' fill='%23d4b87a' transform='rotate(32 52 38)'/%3E%3Ccircle cx='36' cy='36' r='3.2' fill='%23c45c6a'/%3E%3Ccircle cx='36' cy='36' r='1.3' fill='%236b1d32' opacity='.45'/%3E%3C/svg%3E");
+  opacity: 0.42;
+}
+
+.wed2-code-edge::after {
+  background: linear-gradient(var(--wed2-edge-grad-dir), rgba(139, 41, 66, 0.38), rgba(201, 168, 108, 0.22) 45%, transparent 88%);
+}
+
+.wed2-code-edge-bottom {
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  height: var(--wed2-border-thick);
+  --wed2-edge-grad-dir: to top;
+}
+
+.wed2-code-edge-bottom::before {
+  inset: 0;
+  background-size: auto 100%;
+  background-repeat: repeat-x;
+  background-position: left center;
+}
+
+.wed2-code-edge-bottom::after {
+  left: 0;
+  right: 0;
+  bottom: 0;
+  height: 2px;
+  border-radius: 2px;
+}
+
+.wed2-code-edge-right {
+  top: 0;
+  right: 0;
+  width: var(--wed2-border-thick);
+  height: 100%;
+  --wed2-edge-grad-dir: to left;
+}
+
+.wed2-code-edge-right::before {
+  inset: 0;
+  background-size: 100% auto;
+  background-repeat: repeat-y;
+  background-position: center top;
+  transform: scaleX(-1);
+}
+
+.wed2-code-edge-right::after {
+  top: 0;
+  bottom: 0;
+  right: 0;
+  width: 2px;
+  border-radius: 2px;
+}
+
+.wed2-code-edge-left {
+  left: 0;
+  top: 0;
+  width: var(--wed2-border-thick);
+  height: 100%;
+  --wed2-edge-grad-dir: to right;
+}
+
+.wed2-code-edge-left::before {
+  inset: 0;
+  background-size: 100% auto;
+  background-repeat: repeat-y;
+  background-position: center top;
+}
+
+.wed2-code-edge-left::after {
+  top: 0;
+  bottom: 0;
+  left: 0;
+  width: 2px;
+  border-radius: 2px;
+}
+
+.wed2-code-edge-top {
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: var(--wed2-border-thick);
+  --wed2-edge-grad-dir: to bottom;
+}
+
+.wed2-code-edge-top::before {
+  inset: 0;
+  background-size: auto 100%;
+  background-repeat: repeat-x;
+  background-position: left center;
+  transform: scaleY(-1);
+}
+
+.wed2-code-edge-top::after {
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 2px;
+  border-radius: 2px;
+}
+
+.wed2-hero-floral {
+  position: absolute;
+  display: block;
+  height: auto;
+  margin: 0;
+  padding: 0;
+  object-fit: contain;
+  opacity: 0;
+}
+
+/* red-3: top-left, flipped vertically */
+.wed2-hero-floral-tl {
+  top: -6vh;
+  left: -10vw;
+  width: min(52vw, 260px);
+  max-height: 48vh;
+  object-position: top left;
+  transform-origin: bottom left;
+  transform: translateY(-100%) scaleY(-1);
+  z-index: 3;
+}
+
+/* red-1: top-right */
+.wed2-hero-floral-tr {
+  top: -3.3vh;
+  right: -2vw;
+  width: min(44vw, 240px);
+  max-height: 32vh;
+  object-position: top right;
+  z-index: 4;
+}
+
+/* red-gAndb: bottom-left */
+.wed2-hero-couple {
+  position: absolute;
+  bottom: -2.3vw;
+  left: 0;
+  width: min(88vw, 380px);
+  max-height: 58vh;
+  height: auto;
+  margin: 0;
+  padding: 0;
+  z-index: 9;
+  pointer-events: none;
+  object-fit: contain;
+  object-position: bottom left;
+  opacity: 0;
+}
+
+.wed2-hero.is-floral-revealed .wed2-hero-floral-tl {
+  animation: wed2FloralRiseInTl 1.75s cubic-bezier(0.22, 1, 0.36, 1) 0.7s forwards;
+}
+
+.wed2-hero.is-floral-revealed .wed2-hero-floral-tr {
+  animation: wed2FloralRiseIn 1.75s cubic-bezier(0.22, 1, 0.36, 1) 0.7s forwards;
+}
+
+.wed2-hero.is-floral-revealed .wed2-hero-couple {
+  animation: wed2FloralRiseInLeft 1.75s cubic-bezier(0.22, 1, 0.36, 1) 0.7s forwards;
+}
+
+@keyframes wed2FloralRiseIn {
+  from {
+    opacity: 0;
+    transform: translateY(clamp(1.75rem, 6vh, 3.25rem));
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Uses translate so the vertical flip on red-3 stays intact */
+@keyframes wed2FloralRiseInTl {
+  from {
+    opacity: 0;
+    translate: 0 clamp(1.75rem, 6vh, 3.25rem);
+  }
+  to {
+    opacity: 1;
+    translate: 0 0;
+  }
+}
+
+@keyframes wed2FloralRiseInLeft {
+  from {
+    opacity: 0;
+    transform: translateX(clamp(-1.75rem, -6vw, -3.25rem));
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+.wed2-hero-content {
+  position: relative;
+  z-index: 5;
+  width: 100%;
+  margin-top: auto;
+  padding: 0 1rem 42%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.wed2-bismillah-wrap {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: min(78vw, 420px);
+  max-width: 420px;
+  z-index: 7;
+  pointer-events: none;
+}
+
+.wed2-bismillah {
+  width: 100%;
+  height: auto;
+  display: block;
+  opacity: 0;
+  transform: scale(1.45);
+}
+
+.wed2-hero.is-intro-active .wed2-bismillah {
+  animation: wed2BismillahZoomOut 0.95s cubic-bezier(0.22, 1, 0.36, 1) forwards;
+}
+
+@keyframes wed2BismillahZoomOut {
+  from {
+    opacity: 0;
+    transform: scale(1.45);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+.wed2-hero.is-intro-active .wed2-bismillah-wrap {
+  animation: wed2BismillahSettleTop 0.95s cubic-bezier(0.22, 1, 0.36, 1) forwards;
+}
+
+@keyframes wed2BismillahSettleTop {
+  from {
+    top: 50%;
+    width: min(78vw, 420px);
+    transform: translate(-50%, -50%);
+  }
+  to {
+    top: var(--wed2-bismillah-settle-top);
+    width: min(52vw, 240px);
+    max-width: 240px;
+    transform: translate(-50%, 0);
+  }
+}
+
+body.wed2-has-hero-verse {
+  --wed2-hero-verse-top: 36%;
+}
+
+body.wed2-has-hero-verse .wed2-hero {
+  --wed2-bismillah-settle-top: 11%;
+}
+
+body.wed2-has-hero-verse .wed2-ring-wrap {
+  top: 52%;
+}
+
+.wed2-hero-verse {
+  position: absolute;
+  left: 50%;
+  top: var(--wed2-hero-verse-top, 23%);
+  transform: translateX(-50%);
+  width: min(90vw, 360px);
+  z-index: 7;
+  text-align: center;
+  pointer-events: none;
+  opacity: 0;
+}
+
+body:not(.wed2-has-hero-verse) .wed2-hero-verse {
+  display: none;
+}
+
+.wed2-hero-verse-line {
+  margin: 0;
+  font-family: 'Cormorant Garamond', serif;
+  font-size: clamp(0.74rem, 2.9vw, 0.92rem);
+  font-weight: 600;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: var(--wed2-red-soft);
+  line-height: 1.45;
+}
+
+.wed2-hero-verse-ref {
+  margin: 0.38rem 0 0;
+  font-family: 'Nunito', sans-serif;
+  font-size: clamp(0.64rem, 2.3vw, 0.76rem);
+  font-weight: 600;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--wed2-text-soft);
+}
+
+.wed2-hero.is-verse-active .wed2-hero-verse {
+  animation: wed2HeroVerseIn 0.85s cubic-bezier(0.22, 1, 0.36, 1) forwards;
+}
+
+@keyframes wed2HeroVerseIn {
+  from {
+    opacity: 0;
+    transform: translateX(-50%) translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(-50%) translateY(0);
+  }
+}
+
+.wed2-ring-wrap {
+  position: absolute;
+  top: 46%;
+  left: 50%;
+  width: min(66vw, 300px);
+  aspect-ratio: 1;
+  z-index: 8;
+  pointer-events: none;
+  opacity: 0;
+  transform: translate(-50%, -50%) scale(1.4);
+}
+
+.wed2-ring {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+.wed2-ring-names {
+  position: absolute;
+  inset: 22% 18%;
+  pointer-events: none;
+}
+
+.wed2-ring-name {
+  position: absolute;
+  font-family: 'Great Vibes', cursive;
+  font-size: clamp(2.3rem, 8.4vw, 3.85rem);
+  color: var(--wed2-red);
+  line-height: 1.05;
+  max-width: 44%;
+  opacity: 0;
+}
+
+body.wed2-ring-font-pinyon .wed2-ring-name {
+  font-family: 'Pinyon Script', 'Great Vibes', cursive;
+  font-size: clamp(2.4rem, 8.8vw, 4rem);
+  font-weight: 400;
+  letter-spacing: 0.02em;
+}
+
+/* Stylish upright serif — non-cursive ring names */
+body.wed2-ring-font-playfair .wed2-ring-name {
+  font-family: 'Playfair Display', Georgia, 'Times New Roman', serif;
+  font-style: normal;
+  font-weight: 600;
+  font-size: clamp(1.85rem, 6.8vw, 3.1rem);
+  letter-spacing: 0.03em;
+  line-height: 1.08;
+}
+
+body.wed2-ring-font-cormorant .wed2-ring-name {
+  font-family: 'Cormorant Garamond', Georgia, 'Times New Roman', serif;
+  font-style: italic;
+  font-weight: 600;
+  font-size: clamp(2rem, 7.2vw, 3.35rem);
+  letter-spacing: 0.03em;
+  line-height: 1.08;
+}
+
+body.wed2-ring-font-cinzel .wed2-ring-name {
+  font-family: 'Cinzel', 'Playfair Display', Georgia, serif;
+  font-style: normal;
+  font-weight: 600;
+  font-size: clamp(1.55rem, 5.6vw, 2.55rem);
+  letter-spacing: 0.08em;
+  line-height: 1.12;
+  text-transform: none;
+}
+
+body.wed2-ring-font-satisfy .wed2-ring-name {
+  font-family: 'Satisfy', 'Great Vibes', cursive;
+  font-weight: 400;
+  font-size: clamp(2.35rem, 8.6vw, 3.9rem);
+  letter-spacing: 0.02em;
+  line-height: 1.05;
+}
+
+body.wed2-ring-font-dancing .wed2-ring-name {
+  font-family: 'Dancing Script', 'Apple Chancery', cursive;
+  font-weight: 700;
+  font-size: clamp(2.2rem, 8vw, 3.65rem);
+  letter-spacing: 0.02em;
+  line-height: 1.06;
+}
+
+body.wed2-ring-font-allura .wed2-ring-name {
+  font-family: 'Allura', 'Great Vibes', cursive;
+  font-weight: 400;
+  font-size: clamp(2.55rem, 9.2vw, 4.2rem);
+  letter-spacing: 0.02em;
+  line-height: 1.04;
+}
+
+.wed2-ring-name-groom {
+  top: 0;
+  left: 4%;
+  text-align: left;
+}
+
+.wed2-ring-name-bride {
+  bottom: 0;
+  right: 4%;
+  text-align: right;
+}
+
+body.wed2-bride-name-shift-left .wed2-ring-name-bride {
+  right: 12%;
+}
+
+body.wed2-bride-name-shift-more-left .wed2-ring-name-bride {
+  right: 18%;
+}
+
+body.wed2-bride-name-shift-extra-left .wed2-ring-name-bride {
+  right: 24%;
+}
+
+body.wed2-bride-name-shift-further-left .wed2-ring-name-bride {
+  right: 30%;
+}
+
+body.wed2-general.wed2-bride-name-shift-left .wed2-ring-name-bride,
+body.wed2-general.wed2-bride-name-shift-more-left .wed2-ring-name-bride {
+  right: 6%;
+}
+
+body.wed2-bride-first .wed2-ring-name-bride {
+  top: 0;
+  bottom: auto;
+  left: 4%;
+  right: auto;
+  text-align: left;
+}
+
+body.wed2-bride-first .wed2-ring-name-groom {
+  top: auto;
+  bottom: 0;
+  left: auto;
+  right: 4%;
+  text-align: right;
+}
+
+body.wed2-bride-first.wed2-groom-name-shift-left .wed2-ring-name-groom {
+  right: 14%;
+}
+
+body.wed2-bride-first .wed2-hero.is-names-active .wed2-ring-name-bride {
+  animation: wed2RingNameIn 0.75s ease 0.05s forwards;
+}
+
+body.wed2-bride-first .wed2-hero.is-names-active .wed2-ring-name-groom {
+  animation: wed2RingNameIn 0.75s ease 0.45s forwards;
+}
+
+.wed2-ring-amp {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) scale(0.65);
+  font-family: 'Playfair Display', serif;
+  font-size: clamp(1.9rem, 6.6vw, 2.9rem);
+  color: var(--wed2-red-soft);
+  font-style: italic;
+  opacity: 0;
+}
+
+.wed2-hero.is-ring-active .wed2-ring-wrap {
+  animation: wed2RingZoomOut 1s cubic-bezier(0.22, 1, 0.36, 1) forwards;
+}
+
+@keyframes wed2RingZoomOut {
+  from {
+    opacity: 0;
+    transform: translate(-50%, -50%) scale(1.4);
+  }
+  to {
+    opacity: 1;
+    transform: translate(-50%, -50%) scale(1);
+  }
+}
+
+.wed2-hero.is-names-active .wed2-ring-name-groom {
+  animation: wed2RingNameIn 0.75s ease 0.05s forwards;
+}
+
+.wed2-hero.is-names-active .wed2-ring-amp {
+  animation: wed2RingAmpIn 0.65s ease 0.25s forwards;
+}
+
+.wed2-hero.is-names-active .wed2-ring-name-bride {
+  animation: wed2RingNameIn 0.75s ease 0.45s forwards;
+}
+
+@keyframes wed2RingNameIn {
+  from {
+    opacity: 0;
+    transform: translateY(8px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes wed2RingAmpIn {
+  from {
+    opacity: 0;
+    transform: translate(-50%, -50%) scale(0.65);
+  }
+  to {
+    opacity: 1;
+    transform: translate(-50%, -50%) scale(1);
+  }
+}
+
+.wed2-scroll-hint {
+  position: absolute;
+  bottom: clamp(0.85rem, 3.5vh, 1.75rem);
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 25;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.3rem;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.65s ease;
+}
+
+.wed2-scroll-hint.is-visible {
+  opacity: 1;
+}
+
+.wed2-scroll-hint.is-hidden {
+  display: none;
+}
+
+.wed2-scroll-hint-chevrons {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1px;
+}
+
+.wed2-scroll-hint-chevrons span {
+  display: block;
+  width: 11px;
+  height: 11px;
+  border-right: 2.5px solid #fff;
+  border-bottom: 2.5px solid #fff;
+  transform: rotate(-135deg);
+  filter: drop-shadow(0 1px 4px rgba(60, 15, 30, 0.55));
+  animation: wed2ScrollHintBounce 1.55s ease-in-out infinite;
+}
+
+.wed2-scroll-hint-chevrons span:nth-child(2) {
+  animation-delay: 0.14s;
+  opacity: 0.88;
+}
+
+.wed2-scroll-hint-label {
+  font-family: 'Nunito', sans-serif;
+  font-size: 0.84rem;
+  font-weight: 800;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: #fff;
+  text-shadow: 0 1px 6px rgba(60, 15, 30, 0.6);
+}
+
+@keyframes wed2ScrollHintBounce {
+  0%, 100% {
+    transform: rotate(-135deg) translateY(5px);
+    opacity: 0.7;
+  }
+  50% {
+    transform: rotate(-135deg) translateY(-8px);
+    opacity: 1;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .wed2-scroll-hint-chevrons span {
+    animation: none;
+    opacity: 0.95;
+    transform: rotate(-135deg) translateY(-2px);
+  }
+}
+
+body.wed2-scroll-hint-right-red .wed2-scroll-hint {
+  left: auto;
+  right: clamp(3rem, 14vw, 5.5rem);
+  bottom: clamp(1.6rem, 5.5vh, 2.75rem);
+  transform: none;
+}
+
+body.wed2-scroll-hint-right-red .wed2-scroll-hint-chevrons span {
+  border-right-color: var(--wed2-red);
+  border-bottom-color: var(--wed2-red);
+  filter: drop-shadow(0 1px 3px rgba(139, 41, 66, 0.35));
+}
+
+body.wed2-scroll-hint-right-red .wed2-scroll-hint-label {
+  color: var(--wed2-red);
+  text-shadow: 0 1px 4px rgba(255, 250, 248, 0.85);
+}
+
+.wed2-names-row {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem 1rem;
+  padding-top: 1rem;
+  z-index: 3;
+}
+
+.wed2-name {
+  font-family: 'Great Vibes', cursive;
+  font-size: clamp(2.4rem, 10vw, 3.8rem);
+  color: var(--wed2-red);
+  line-height: 1.1;
+  opacity: 0;
+  transform: translateX(0);
+}
+
+.wed2-name-groom {
+  transform: translateX(-80px);
+}
+
+.wed2-name-bride {
+  transform: translateX(80px);
+}
+
+.wed2-amp {
+  font-family: 'Playfair Display', serif;
+  font-size: clamp(1.4rem, 5vw, 2rem);
+  color: var(--wed2-red-soft);
+  font-style: italic;
+  opacity: 0;
+  transform: scale(0.6);
+}
+
+.wed2-hero.is-names-active .wed2-name-groom {
+  animation: wed2NameFromLeft 1s ease 0.2s forwards;
+}
+
+.wed2-hero.is-names-active .wed2-name-bride {
+  animation: wed2NameFromRight 1s ease 0.4s forwards;
+}
+
+.wed2-hero.is-names-active .wed2-amp {
+  animation: wed2AmpPop 0.7s ease 0.7s forwards;
+}
+
+@keyframes wed2NameFromLeft {
+  to { opacity: 1; transform: translateX(0); }
+}
+
+@keyframes wed2NameFromRight {
+  to { opacity: 1; transform: translateX(0); }
+}
+
+@keyframes wed2AmpPop {
+  to { opacity: 1; transform: scale(1); }
+}
+
+.wed2-parents {
+  margin-top: 1.5rem;
+  opacity: 0;
+  z-index: 3;
+}
+
+.wed2-parents.is-visible {
+  animation: wed2FadeUp 0.8s ease forwards;
+}
+
+.wed2-parent-prefix {
+  font-family: 'Nunito', sans-serif;
+  font-size: 0.75rem;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: var(--wed2-text-soft);
+  margin-bottom: 0.25rem;
+}
+
+.wed2-parents-name {
+  font-family: 'Playfair Display', serif;
+  font-size: 1.05rem;
+  color: var(--wed2-text);
+}
+
+.wed2-parents.is-hidden {
+  display: none;
+}
+
+/* ── Content sections — clearly alternating pastel / dark wine ── */
+.wed2-section {
+  --wed2-section-fg: #4a2c32;
+  --wed2-section-fg-soft: #7a5a60;
+  --wed2-section-heading: #8b2942;
+  --wed2-section-accent: #c45c6a;
+  --wed2-section-surface:
+    repeating-linear-gradient(
+      -12deg,
+      transparent,
+      transparent 11px,
+      rgba(139, 41, 66, 0.024) 11px,
+      rgba(139, 41, 66, 0.024) 12px
+    ),
+    repeating-linear-gradient(
+      78deg,
+      transparent,
+      transparent 15px,
+      rgba(201, 168, 108, 0.03) 15px,
+      rgba(201, 168, 108, 0.03) 16px
+    ),
+    repeating-linear-gradient(
+      0deg,
+      transparent,
+      transparent 3px,
+      rgba(160, 120, 70, 0.04) 3px,
+      rgba(160, 120, 70, 0.04) 4px
+    ),
+    radial-gradient(ellipse at 18% 12%, rgba(255, 255, 255, 0.72), transparent 42%),
+    radial-gradient(ellipse at 82% 88%, rgba(196, 92, 106, 0.14), transparent 38%),
+    radial-gradient(ellipse at 50% 55%, rgba(255, 250, 248, 0.42), transparent 68%),
+    linear-gradient(168deg, #fdf5f1 0%, #f6e8e2 46%, #fbefeb 100%);
+  position: relative;
+  z-index: 1;
+  max-width: 640px;
+  margin: 0 auto;
+  padding: 3.4rem 1.25rem 3rem;
+  text-align: center;
+  isolation: isolate;
+  color: var(--wed2-section-fg);
+}
+
+.wed2-section::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  left: 50%;
+  width: 100vw;
+  transform: translateX(-50%);
+  background: var(--wed2-section-surface);
+  z-index: -2;
+}
+
+.wed2-section::before {
+  content: "";
+  position: absolute;
+  top: -2.8rem;
+  left: 50%;
+  width: 100vw;
+  height: 2.95rem;
+  transform: translateX(-50%);
+  background: var(--wed2-section-surface);
+  clip-path: path("M0,44 C120,10 235,12 340,34 C430,52 515,62 620,38 C740,10 855,8 980,26 C1095,42 1210,30 1320,12 C1415,0 1510,2 1600,24 L1600,48 L0,48 Z");
+  z-index: -1;
+}
+
+.wed2-section:nth-of-type(even) {
+  --wed2-section-fg: #f7e8eb;
+  --wed2-section-fg-soft: #d6b3bb;
+  --wed2-section-heading: #f2bcc6;
+  --wed2-section-accent: #e59ba8;
+  --wed2-section-surface:
+    repeating-linear-gradient(
+      6deg,
+      transparent,
+      transparent 9px,
+      rgba(255, 219, 227, 0.045) 9px,
+      rgba(255, 219, 227, 0.045) 10px
+    ),
+    repeating-linear-gradient(
+      96deg,
+      transparent,
+      transparent 18px,
+      rgba(201, 168, 108, 0.06) 18px,
+      rgba(201, 168, 108, 0.06) 19px
+    ),
+    repeating-linear-gradient(
+      90deg,
+      transparent,
+      transparent 5px,
+      rgba(255, 236, 240, 0.03) 5px,
+      rgba(255, 236, 240, 0.03) 6px
+    ),
+    radial-gradient(ellipse at 75% 18%, rgba(255, 231, 236, 0.12), transparent 40%),
+    radial-gradient(ellipse at 22% 82%, rgba(201, 168, 108, 0.08), transparent 36%),
+    radial-gradient(ellipse at 48% 48%, rgba(255, 252, 250, 0.05), transparent 65%),
+    linear-gradient(172deg, #4a1625 0%, #35111b 45%, #2b0d16 100%);
+}
+
+.wed2-section:first-of-type::before {
+  display: none;
+}
+
+#wed2-scratch-section::before,
+#wed2-countdown-section::before {
+  top: -1px;
+  height: 1px;
+  clip-path: none;
+}
+
+.wed2-section-title {
+  font-family: 'Playfair Display', serif;
+  font-size: clamp(1.4rem, 5vw, 1.8rem);
+  font-weight: 600;
+  color: var(--wed2-section-heading);
+  margin-bottom: 1.25rem;
+  letter-spacing: 0.04em;
+}
+
+.wed2-reveal {
+  opacity: 0;
+  transform: translateY(28px);
+  transition: opacity 0.7s ease, transform 0.7s ease;
+}
+
+.wed2-reveal.is-visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Quote */
+.wed2-quote {
+  padding-top: 2rem;
+}
+
+.wed2-ornament {
+  display: block;
+  color: var(--wed2-section-accent);
+  font-size: 1.2rem;
+  margin: 0.5rem 0;
+}
+
+.wed2-quote-text {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: clamp(1.15rem, 4vw, 1.45rem);
+  font-style: italic;
+  line-height: 1.7;
+  color: var(--wed2-section-fg);
+  max-width: 480px;
+  margin: 0 auto;
+  quotes: '"' '"';
+}
+
+.wed2-quote-text::before { content: open-quote; }
+.wed2-quote-text::after { content: close-quote; }
+
+/* Scratch card */
+.wed2-scratch-hint {
+  font-family: 'Nunito', sans-serif;
+  font-size: 0.85rem;
+  color: var(--wed2-section-fg-soft);
+  margin-bottom: 1rem;
+  letter-spacing: 0.06em;
+}
+
+.wed2-scratch.is-revealed-static .wed2-scratch-hint {
+  display: none;
+}
+
+.wed2-scratch {
+  padding-bottom: 4rem;
+  overflow: visible;
+}
+
+.wed2-scratch-burst {
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+  z-index: 40;
+  overflow: hidden;
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.35s ease, visibility 0.35s ease;
+}
+
+.wed2-scratch-burst.is-active {
+  opacity: 1;
+  visibility: visible;
+}
+
+.wed2-popper {
+  position: absolute;
+  top: -2rem;
+  left: 0;
+  border-radius: 2px;
+  opacity: 0.96;
+  animation: wed2-popper-fall linear forwards;
+  transform-origin: center center;
+  will-change: transform, opacity;
+}
+
+.wed2-popper::before,
+.wed2-popper::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+}
+
+.wed2-popper::before {
+  border-radius: 999px;
+  background: inherit;
+  transform: rotate(55deg) scale(0.72);
+  opacity: 0.88;
+}
+
+.wed2-popper::after {
+  width: 190%;
+  height: 2px;
+  left: 50%;
+  top: 50%;
+  inset: auto;
+  transform: translate(-50%, -50%) rotate(28deg);
+  background: currentColor;
+  opacity: 0.52;
+}
+
+.wed2-popper-red {
+  background: linear-gradient(180deg, #c45c6a 0%, #8b2942 55%, #6b1d32 100%);
+  color: #8b2942;
+}
+
+.wed2-popper-gold {
+  background: linear-gradient(180deg, #e1c998 0%, #c9a86c 58%, #b58e52 100%);
+  color: #c9a86c;
+}
+
+.wed2-popper-blush {
+  background: linear-gradient(180deg, #f3c7cc 0%, #dea0aa 58%, #c97886 100%);
+  color: #dea0aa;
+}
+
+@keyframes wed2-popper-fall {
+  0% {
+    transform: translate3d(0, 0, 0) rotate(0deg);
+    opacity: 0.98;
+  }
+  12% {
+    opacity: 1;
+  }
+  100% {
+    transform: translate3d(var(--wed2-drift-x, 0px), 100vh, 0) rotate(var(--wed2-twist, 180deg));
+    opacity: 0.55;
+  }
+}
+
+.wed2-scratch-card {
+  position: relative;
+  width: min(100%, 320px);
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  touch-action: none;
+  filter: drop-shadow(0 10px 22px rgba(139, 41, 66, 0.12));
+}
+
+.wed2-scroll-cap {
+  flex-shrink: 0;
+  width: calc(100% + 16px);
+  height: 22px;
+  border-radius: 999px;
+  background:
+    linear-gradient(
+      180deg,
+      #ecd9b4 0%,
+      #d4b978 26%,
+      #b8924a 52%,
+      #96702e 76%,
+      #7a5a24 100%
+    );
+  box-shadow:
+    0 4px 12px rgba(90, 21, 40, 0.16),
+    inset 0 2px 5px rgba(255, 248, 235, 0.5),
+    inset 0 -4px 7px rgba(80, 50, 20, 0.28);
+  position: relative;
+  z-index: 3;
+}
+
+.wed2-scroll-cap::before {
+  content: "";
+  position: absolute;
+  inset: 3px 8px;
+  border-radius: 999px;
+  background: linear-gradient(180deg, rgba(255, 248, 235, 0.35), transparent 55%);
+  pointer-events: none;
+}
+
+.wed2-scroll-cap-top {
+  margin-bottom: -7px;
+}
+
+.wed2-scroll-cap-bottom {
+  margin-top: -7px;
+}
+
+.wed2-scroll-panel {
+  position: relative;
+  width: 100%;
+  min-height: 214px;
+  overflow: hidden;
+  z-index: 2;
+  background: linear-gradient(168deg, #faf3e4 0%, #f0e4cc 48%, #e6d5b5 100%);
+  border-left: 1px solid rgba(180, 140, 90, 0.24);
+  border-right: 1px solid rgba(180, 140, 90, 0.24);
+  box-shadow:
+    inset 10px 0 18px rgba(160, 120, 70, 0.07),
+    inset -10px 0 18px rgba(160, 120, 70, 0.07);
+}
+
+.wed2-scroll-panel::before,
+.wed2-scroll-panel::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+}
+
+.wed2-scroll-panel::before {
+  background:
+    radial-gradient(ellipse at 50% 16%, rgba(255, 252, 245, 0.55), transparent 44%),
+    radial-gradient(ellipse at 20% 82%, rgba(201, 168, 108, 0.12), transparent 32%),
+    radial-gradient(ellipse at 82% 80%, rgba(139, 41, 66, 0.07), transparent 34%);
+  z-index: 0;
+}
+
+.wed2-scroll-panel::after {
+  background:
+    repeating-linear-gradient(
+      0deg,
+      transparent,
+      transparent 3px,
+      rgba(160, 120, 70, 0.035) 3px,
+      rgba(160, 120, 70, 0.035) 4px
+    ),
+    repeating-linear-gradient(
+      90deg,
+      transparent,
+      transparent 5px,
+      rgba(160, 120, 70, 0.025) 5px,
+      rgba(160, 120, 70, 0.025) 6px
+    );
+  opacity: 0.65;
+  mix-blend-mode: multiply;
+  z-index: 0;
+}
+
+.wed2-scratch-reveal {
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background:
+    radial-gradient(ellipse at 50% 16%, rgba(255, 252, 245, 0.92), transparent 44%),
+    radial-gradient(ellipse at 20% 82%, rgba(201, 168, 108, 0.14), transparent 32%),
+    radial-gradient(ellipse at 82% 80%, rgba(139, 41, 66, 0.08), transparent 34%),
+    linear-gradient(168deg, #faf3e4 0%, #f0e4cc 45%, #e6d5b5 100%);
+  padding: 2.2rem 1.4rem 1.5rem;
+}
+
+.wed2-scratch-event {
+  font-family: 'Playfair Display', serif;
+  font-size: 1.05rem;
+  font-weight: 600;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: #6b1d32;
+  margin-bottom: 0.45rem;
+}
+
+.wed2-scratch-month {
+  font-family: 'Playfair Display', serif;
+  font-size: 1.1rem;
+  letter-spacing: 0.2em;
+  color: #a67c3d;
+  margin-bottom: 0.25rem;
+}
+
+body.wed2-scratch-month-bold .wed2-scratch-month {
+  font-weight: 700;
+}
+
+.wed2-scratch-day {
+  font-family: 'Playfair Display', serif;
+  font-size: 1.6rem;
+  font-weight: 600;
+  color: #6b1d32;
+}
+
+.wed2-scratch-day.wed2-scratch-day-dual {
+  font-size: clamp(1.05rem, 3.8vw, 1.35rem);
+  line-height: 1.35;
+}
+
+.wed2-scratch-day-amp {
+  font-weight: 500;
+  opacity: 0.88;
+}
+
+.wed2-scratch-year {
+  font-size: 1.1rem;
+  color: #8b5e48;
+  margin-bottom: 0.5rem;
+}
+
+.wed2-scratch-time {
+  font-family: 'Nunito', sans-serif;
+  font-size: 0.9rem;
+  color: #6b4a42;
+  letter-spacing: 0.05em;
+}
+
+.wed2-scratch-time-multiline .wed2-scratch-time-line {
+  display: block;
+}
+
+.wed2-scratch-time-multiline .wed2-scratch-time-line + .wed2-scratch-time-line {
+  margin-top: 0.12rem;
+}
+
+.wed2-scratch-schedule-time {
+  white-space: nowrap;
+}
+
+.wed2-details-schedule-time {
+  white-space: nowrap;
+}
+
+.wed2-timeline-schedule-time {
+  white-space: nowrap;
+}
+
+.wed2-scratch-canvas {
+  position: absolute;
+  inset: 0;
+  z-index: 2;
+  width: 100%;
+  height: 100%;
+  cursor: crosshair;
+  touch-action: none;
+}
+
+.wed2-scratch-card.is-revealed .wed2-scratch-canvas {
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.5s ease;
+}
+
+.wed2-reveal-btn {
+  margin-top: 0.75rem;
+  padding: 0.5rem 1.25rem;
+  border: 1px solid var(--wed2-red-soft);
+  border-radius: 999px;
+  background: transparent;
+  font-family: 'Nunito', sans-serif;
+  font-size: 0.85rem;
+  color: var(--wed2-red);
+  cursor: pointer;
+}
+
+/* Full details card */
+.wed2-details {
+  padding-top: 3.8rem;
+  padding-bottom: 3.8rem;
+}
+
+.wed2-details-card {
+  position: relative;
+  max-width: 620px;
+  margin: 0 auto;
+  padding: clamp(2rem, 6vw, 3rem) clamp(1.35rem, 5vw, 2.35rem);
+  background:
+    radial-gradient(circle at top, rgba(255, 255, 255, 0.5), transparent 30%),
+    radial-gradient(circle at 14% 82%, rgba(196, 92, 106, 0.12), transparent 28%),
+    radial-gradient(circle at 88% 18%, rgba(201, 168, 108, 0.18), transparent 26%),
+    repeating-linear-gradient(
+      135deg,
+      rgba(255, 255, 255, 0.14) 0,
+      rgba(255, 255, 255, 0.14) 10px,
+      rgba(255, 255, 255, 0) 10px,
+      rgba(255, 255, 255, 0) 24px
+    ),
+    linear-gradient(160deg, #fffaf8 0%, #f9ece8 52%, #fff7f2 100%);
+  border-radius: 28px;
+  box-shadow:
+    0 18px 45px rgba(122, 63, 78, 0.12),
+    inset 0 1px 0 rgba(255, 255, 255, 0.5);
+  overflow: hidden;
+}
+
+.wed2-details-card-border,
+.wed2-details-card::after {
+  content: "";
+  position: absolute;
+  pointer-events: none;
+}
+
+.wed2-details-card-border {
+  inset: 0.8rem;
+  border: 1.5px solid rgba(201, 168, 108, 0.46);
+  border-radius: 22px;
+}
+
+.wed2-details-card::after {
+  inset: 0;
+  background:
+    radial-gradient(circle at 18% 12%, rgba(255, 255, 255, 0.38), transparent 20%),
+    radial-gradient(circle at 82% 88%, rgba(201, 168, 108, 0.08), transparent 22%);
+  opacity: 0.8;
+}
+
+.wed2-details-bismillah,
+.wed2-details-welcome,
+.wed2-details-couple,
+.wed2-details-event,
+.wed2-insha-allah {
+  position: relative;
+  z-index: 1;
+}
+
+.wed2-insha-allah {
+  margin: 1.65rem auto 0;
+  text-align: center;
+  font-family: 'Cormorant Garamond', serif;
+  font-size: clamp(1.65rem, 5.2vw, 2.2rem);
+  font-style: italic;
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  color: var(--wed2-red-soft);
+}
+
+.wed2-details-bismillah {
+  display: block;
+  margin-bottom: 0.85rem;
+  font-family: 'Playfair Display', serif;
+  font-size: clamp(1rem, 3.8vw, 1.25rem);
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--wed2-red-soft);
+}
+
+.wed2-details-greeting {
+  display: none;
+}
+
+body.wed2-hindu .wed2-bismillah-wrap,
+body.wed2-general .wed2-bismillah-wrap {
+  display: none !important;
+}
+
+body.wed2-hindu .wed2-details-bismillah,
+body.wed2-general .wed2-details-bismillah {
+  display: none;
+}
+
+body.wed2-hindu .wed2-details-greeting,
+body.wed2-general .wed2-details-greeting {
+  display: block;
+  margin-bottom: 0.85rem;
+  font-family: 'Playfair Display', serif;
+  font-size: clamp(1rem, 3.8vw, 1.25rem);
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--wed2-red-soft);
+}
+
+.wed2-details-welcome {
+  max-width: 500px;
+  margin: 0 auto 2rem;
+  font-size: clamp(1.02rem, 3.8vw, 1.22rem);
+  line-height: 1.75;
+  color: var(--wed2-text);
+}
+
+.wed2-details-couple {
+  display: grid;
+  grid-template-columns: 1fr auto 1fr;
+  gap: 1rem;
+  align-items: stretch;
+  margin-bottom: 2rem;
+}
+
+.wed2-details-person {
+  padding: 1.35rem 1rem 1.15rem;
+  background: rgba(255, 255, 255, 0.46);
+  border: 1px solid rgba(139, 41, 66, 0.14);
+  border-radius: 18px;
+  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.42);
+}
+
+.wed2-details-role {
+  margin-bottom: 0.55rem;
+  font-family: 'Nunito', sans-serif;
+  font-size: 0.78rem;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+  color: var(--wed2-red-soft);
+}
+
+.wed2-details-name {
+  margin: 0 0 0.5rem;
+  font-family: 'Great Vibes', cursive;
+  font-size: clamp(2.1rem, 7vw, 3.2rem);
+  line-height: 1;
+  color: var(--wed2-red);
+}
+
+body.wed2-details-name-font-cormorant .wed2-details-name {
+  font-family: 'Cormorant Garamond', serif;
+  font-weight: 600;
+  font-size: clamp(1.95rem, 6.2vw, 2.75rem);
+  line-height: 1.1;
+  letter-spacing: 0.02em;
+}
+
+body.wed2-details-name-font-pinyon .wed2-details-name {
+  font-family: 'Pinyon Script', cursive;
+  font-weight: 400;
+  font-size: clamp(2.25rem, 7.2vw, 3.15rem);
+  line-height: 1.08;
+  letter-spacing: 0.02em;
+}
+
+body.wed2-details-name-font-allura .wed2-details-name {
+  font-family: 'Allura', 'Great Vibes', cursive;
+  font-weight: 400;
+  font-size: clamp(2.35rem, 7.6vw, 3.5rem);
+  line-height: 1.02;
+  letter-spacing: 0.02em;
+}
+
+.wed2-details-parents-prefix {
+  margin-bottom: 0.25rem;
+  font-family: 'Nunito', sans-serif;
+  font-size: 0.82rem;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--wed2-text-soft);
+}
+
+.wed2-details-parents-name {
+  font-family: 'Playfair Display', serif;
+  font-size: clamp(1rem, 3.6vw, 1.15rem);
+  color: var(--wed2-text);
+  line-height: 1.55;
+}
+
+.wed2-details-divider {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 0.55rem;
+  min-width: 2.6rem;
+}
+
+.wed2-details-divider-line {
+  width: 1px;
+  flex: 1 1 42px;
+  background: linear-gradient(180deg, transparent, rgba(201, 168, 108, 0.8), transparent);
+}
+
+.wed2-details-divider-mark {
+  font-family: 'Great Vibes', cursive;
+  font-size: 1.45rem;
+  color: var(--wed2-red-soft);
+}
+
+.wed2-details-event {
+  display: grid;
+  gap: 1rem;
+}
+
+.wed2-details-event-block {
+  padding: 1rem 1.1rem;
+  background: rgba(255, 253, 251, 0.68);
+  border: 1px solid rgba(201, 168, 108, 0.32);
+  border-radius: 16px;
+}
+
+.wed2-details-label {
+  margin-bottom: 0.35rem;
+  font-family: 'Nunito', sans-serif;
+  font-size: 0.78rem;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+  color: var(--wed2-red-soft);
+}
+
+.wed2-details-value {
+  font-family: 'Playfair Display', serif;
+  font-size: clamp(1.05rem, 3.8vw, 1.22rem);
+  line-height: 1.65;
+  color: var(--wed2-text);
+}
+
+.wed2-details-value-multiline .wed2-details-subline {
+  display: block;
+  margin-top: 0.35rem;
+}
+
+.wed2-details-value-multiline .wed2-details-subline + .wed2-details-subline {
+  margin-top: 0.12rem;
+}
+
+/* Timeline */
+.wed2-timeline-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  text-align: left;
+  max-width: 400px;
+  margin-inline: auto;
+  position: relative;
+}
+
+.wed2-timeline-list::before {
+  content: '';
+  position: absolute;
+  left: 11px;
+  top: 8px;
+  bottom: 8px;
+  width: 2px;
+  background: linear-gradient(180deg, var(--wed2-red-soft), var(--wed2-pastel-blush));
+}
+
+.wed2-timeline-item {
+  display: flex;
+  gap: 1rem;
+  align-items: flex-start;
+  padding-bottom: 1.5rem;
+  position: relative;
+}
+
+.wed2-timeline-item:last-child {
+  padding-bottom: 0;
+}
+
+.wed2-timeline-item.is-hidden {
+  display: none;
+}
+
+.wed2-timeline-dot {
+  flex-shrink: 0;
+  width: 24px;
+  height: 24px;
+  border-radius: 50%;
+  background: var(--wed2-paper);
+  border: 3px solid var(--wed2-red);
+  margin-top: 4px;
+  z-index: 1;
+}
+
+.wed2-timeline-card {
+  flex: 1;
+  background: var(--wed2-paper);
+  border: 1px solid rgba(139, 41, 66, 0.15);
+  border-radius: 10px;
+  padding: 0.85rem 1.1rem;
+  box-shadow: 0 2px 12px rgba(139, 41, 66, 0.06);
+}
+
+.wed2-timeline-title {
+  font-family: 'Playfair Display', serif;
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: var(--wed2-red);
+  margin: 0 0 0.2rem;
+}
+
+.wed2-timeline-time {
+  font-family: 'Nunito', sans-serif;
+  font-size: 0.9rem;
+  color: var(--wed2-text-soft);
+  margin: 0;
+}
+
+#wed2-timeline-section {
+  --wed2-section-fg: #4a2c32;
+  --wed2-section-fg-soft: #7a5a60;
+  --wed2-section-heading: #8b2942;
+  --wed2-section-accent: #c45c6a;
+  --wed2-section-surface:
+    repeating-linear-gradient(
+      -12deg,
+      transparent,
+      transparent 11px,
+      rgba(139, 41, 66, 0.024) 11px,
+      rgba(139, 41, 66, 0.024) 12px
+    ),
+    repeating-linear-gradient(
+      78deg,
+      transparent,
+      transparent 15px,
+      rgba(201, 168, 108, 0.03) 15px,
+      rgba(201, 168, 108, 0.03) 16px
+    ),
+    repeating-linear-gradient(
+      0deg,
+      transparent,
+      transparent 3px,
+      rgba(160, 120, 70, 0.04) 3px,
+      rgba(160, 120, 70, 0.04) 4px
+    ),
+    radial-gradient(ellipse at 18% 12%, rgba(255, 255, 255, 0.72), transparent 42%),
+    radial-gradient(ellipse at 82% 88%, rgba(196, 92, 106, 0.14), transparent 38%),
+    radial-gradient(ellipse at 50% 55%, rgba(255, 250, 248, 0.42), transparent 68%),
+    linear-gradient(168deg, #fdf5f1 0%, #f6e8e2 46%, #fbefeb 100%);
+}
+
+/* Map */
+.wed2-map {
+  padding-bottom: 4rem;
+}
+
+.wed2-map-dual .wed2-map-block + .wed2-map-block {
+  margin-top: 2.75rem;
+}
+
+.wed2-map-subtitle {
+  font-family: 'Playfair Display', serif;
+  font-size: 1.02rem;
+  font-weight: 600;
+  color: var(--wed2-red);
+  margin: 0 0 0.65rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.wed2-address {
+  font-size: 1.05rem;
+  color: var(--wed2-section-fg);
+  margin-bottom: 1.25rem;
+  line-height: 1.5;
+  max-width: 420px;
+  margin-inline: auto;
+}
+
+.wed2-map-frame {
+  position: relative;
+  width: 100%;
+  padding-bottom: 56.25%;
+  border: 3px double var(--wed2-red);
+  border-radius: 10px;
+  overflow: hidden;
+  margin-bottom: 1.25rem;
+  box-shadow: 0 4px 20px rgba(139, 41, 66, 0.1);
+  background: var(--wed2-pastel-blush);
+}
+
+.wed2-map-iframe {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  border: 0;
+}
+
+.wed2-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0.75rem 1.75rem;
+  border: 2px solid var(--wed2-red);
+  border-radius: 999px;
+  background: linear-gradient(145deg, var(--wed2-red) 0%, var(--wed2-red-deep) 100%);
+  color: var(--wed2-paper);
+  font-family: 'Nunito', sans-serif;
+  font-size: 0.9rem;
+  font-weight: 600;
+  letter-spacing: 0.06em;
+  text-decoration: none;
+  cursor: pointer;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  box-shadow: 0 4px 16px rgba(139, 41, 66, 0.2);
+}
+
+.wed2-btn:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 6px 20px rgba(139, 41, 66, 0.28);
+}
+
+.wed2-btn:active {
+  transform: translateY(0);
+}
+
+.wed2-details-welcome .wed2-details-host-name,
+.wed2-details-welcome strong {
+  display: block;
+  margin: 0.4rem 0;
+  font-weight: 800;
+  color: var(--wed2-red-deep);
+}
+
+.wed2-rsvp-contact {
+  text-align: center;
+}
+
+.wed2-rsvp-contact-note {
+  margin: 0.35rem 0 0;
+  font-family: 'Cormorant Garamond', Georgia, serif;
+  font-size: clamp(1.05rem, 3.6vw, 1.25rem);
+  color: var(--wed2-ink-soft);
+}
+
+.wed2-rsvp-contact-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+  justify-content: center;
+  margin-top: 1.1rem;
+}
+
+body.wed2-no-song .wed2-mute-btn {
+  display: none !important;
+}
+
+body.wed2-ring-names-nowrap .wed2-ring-name {
+  white-space: nowrap;
+  max-width: none;
+}
+
+body.wed2-ring-names-nowrap.wed2-ring-font-allura .wed2-ring-name {
+  font-size: clamp(1.85rem, 6.8vw, 3.1rem);
+}
+
+body.wed2-ring-larger .wed2-ring-wrap {
+  width: min(70vw, 305px);
+}
+
+body.wed2-ring-higher .wed2-ring-wrap {
+  top: 40%;
+}
+
+body.wed2-ring-names-smaller .wed2-ring-name {
+  font-size: clamp(2.15rem, 7.6vw, 3.45rem);
+  max-width: 52%;
+}
+
+body.wed2-ring-names-smaller.wed2-ring-font-allura .wed2-ring-name {
+  font-size: clamp(2.05rem, 7.4vw, 3.35rem);
+}
+
+body.wed2-ring-names-smaller.wed2-ring-names-nowrap .wed2-ring-name {
+  max-width: none;
+}
+
+body.wed2-ring-names-tighter .wed2-ring-names {
+  inset: 26% 18% 22% 18%;
+}
+
+body.wed2-ring-names-tighter .wed2-ring-name-groom {
+  top: 0.45em;
+}
+
+/* Extra-large ring */
+body.wed2-ring-xl .wed2-ring-wrap {
+  width: min(78vw, 345px);
+}
+
+/* Stack both names horizontally centered inside the ring */
+body.wed2-ring-names-center .wed2-ring-names {
+  inset: 20% 10%;
+}
+body.wed2-ring-names-center .wed2-ring-name-groom,
+body.wed2-ring-names-center .wed2-ring-name-bride {
+  left: 0;
+  right: 0;
+  max-width: 100%;
+  text-align: center;
+}
+body.wed2-ring-names-center .wed2-ring-name-groom {
+  top: 8%;
+  bottom: auto;
+}
+body.wed2-ring-names-center .wed2-ring-name-bride {
+  bottom: 8%;
+  top: auto;
+}
+
+/* Couple photo */
+.wed2-photo-frame {
+  position: relative;
+  max-width: 420px;
+  margin: 0 auto;
+  padding: 8px;
+  background: var(--wed2-paper);
+  border: 3px double var(--wed2-red-soft);
+  border-radius: 4px;
+  box-shadow: 0 8px 32px rgba(139, 41, 66, 0.12);
+}
+
+.wed2-photo-frame::before,
+.wed2-photo-frame::after {
+  content: '';
+  position: absolute;
+  width: 20px;
+  height: 20px;
+  border-color: var(--wed2-gold);
+  border-style: solid;
+}
+
+.wed2-photo-frame::before {
+  top: 4px;
+  left: 4px;
+  border-width: 2px 0 0 2px;
+}
+
+.wed2-photo-frame::after {
+  bottom: 4px;
+  right: 4px;
+  border-width: 0 2px 2px 0;
+}
+
+.wed2-couple-img {
+  display: block;
+  width: 100%;
+  height: auto;
+  border-radius: 2px;
+  aspect-ratio: 4 / 5;
+  object-fit: cover;
+}
+
+/* Countdown */
+.wed2-countdown {
+  padding-bottom: 4rem;
+}
+
+.wed2-counter-stage {
+  position: relative;
+  max-width: min(100%, 600px);
+  margin: 0 auto;
+  padding-bottom: 0.5rem;
+  overflow: visible;
+}
+
+.wed2-polaroid-threads-svg {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  z-index: 0;
+  overflow: visible;
+}
+
+.wed2-polaroid-thread-line {
+  stroke: url(#wed2-thread-gradient);
+  stroke-width: 1.6;
+  stroke-linecap: round;
+  opacity: 0.9;
+}
+
+.wed2-counter-grid {
+  position: relative;
+  z-index: 2;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 0.75rem;
+  max-width: min(100%, 600px);
+  margin: 0 auto;
+}
+
+.wed2-counter-cell {
+  background: rgba(255, 250, 248, 0.72);
+  border: 2px solid rgba(139, 41, 66, 0.18);
+  border-radius: 10px;
+  padding: 1rem 0.5rem;
+  text-align: center;
+}
+
+.wed2-section:nth-of-type(even) .wed2-counter-cell {
+  background: rgba(255, 248, 245, 0.1);
+  border-color: rgba(240, 184, 194, 0.24);
+}
+
+.wed2-counter-anchor {
+  position: relative;
+}
+
+.wed2-counter-anchor::after {
+  content: '';
+  position: absolute;
+  left: 50%;
+  bottom: -5px;
+  width: 7px;
+  height: 7px;
+  transform: translateX(-50%);
+  border-radius: 50%;
+  background: linear-gradient(145deg, var(--wed2-gold) 0%, #b8924a 100%);
+  box-shadow: 0 1px 3px rgba(90, 21, 40, 0.25);
+  z-index: 3;
+}
+
+.wed2-counter-num {
+  display: block;
+  font-family: 'Playfair Display', serif;
+  font-size: clamp(1.6rem, 6vw, 2.2rem);
+  font-weight: 600;
+  color: var(--wed2-section-heading);
+  line-height: 1;
+}
+
+.wed2-counter-cell small {
+  display: block;
+  font-family: 'Nunito', sans-serif;
+  font-size: 0.7rem;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--wed2-section-fg-soft);
+  margin-top: 0.35rem;
+}
+
+/* Countdown polaroids */
+@keyframes wed2PolaroidSwing {
+  0%, 100% { transform: rotate(var(--swing-from, -4deg)); }
+  50% { transform: rotate(var(--swing-to, 4deg)); }
+}
+
+.wed2-polaroid-row {
+  position: relative;
+  z-index: 1;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 0.75rem;
+  align-items: start;
+  margin-top: clamp(3rem, 9vw, 4rem);
+  padding: 0;
+  overflow: visible;
+}
+
+.wed2-polaroid-row.is-hidden {
+  display: none;
+}
+
+.wed2-polaroid-hang {
+  width: 100%;
+  min-width: 0;
+  display: flex;
+  justify-content: center;
+}
+
+.wed2-polaroid-hang-1 { grid-column: 1; }
+.wed2-polaroid-hang-2 { grid-column: 2; }
+.wed2-polaroid-hang-3 { grid-column: 3; }
+.wed2-polaroid-hang-4 { grid-column: 4; }
+
+.wed2-polaroid-hang.is-hidden {
+  display: none;
+}
+
+.wed2-polaroid-swing {
+  position: relative;
+  width: clamp(120px, 26vw, 162px);
+  max-width: 100%;
+  transform-origin: top center;
+  opacity: 0;
+  transform: translateY(14px) rotate(var(--swing-from, -4deg));
+  transition:
+    opacity 0.65s ease,
+    transform 0.65s cubic-bezier(0.34, 1.2, 0.64, 1);
+}
+
+.wed2-polaroid-swing::before {
+  content: '';
+  position: absolute;
+  top: -3px;
+  left: 50%;
+  width: 14px;
+  height: 5px;
+  transform: translateX(-50%);
+  background: rgba(212, 175, 100, 0.55);
+  border-radius: 1px;
+  box-shadow: 0 1px 2px rgba(90, 21, 40, 0.12);
+  z-index: 1;
+}
+
+.wed2-polaroid-hang-1 { --swing-from: -5deg; --swing-to: 4deg; --swing-duration: 4.4s; --swing-delay: 0.15s; }
+.wed2-polaroid-hang-2 { --swing-from: 3deg; --swing-to: -5deg; --swing-duration: 3.9s; --swing-delay: 0.45s; }
+.wed2-polaroid-hang-3 { --swing-from: 6deg; --swing-to: -3deg; --swing-duration: 4.6s; --swing-delay: 0.75s; }
+.wed2-polaroid-hang-4 { --swing-from: -4deg; --swing-to: 5deg; --swing-duration: 4.1s; --swing-delay: 1.05s; }
+
+.wed2-countdown.is-visible .wed2-polaroid-hang-1 .wed2-polaroid-swing {
+  opacity: 1;
+  transform: translateY(0) rotate(var(--swing-from, -5deg));
+  transition-delay: 0.2s;
+}
+
+.wed2-countdown.is-visible .wed2-polaroid-hang-2 .wed2-polaroid-swing {
+  opacity: 1;
+  transform: translateY(0) rotate(var(--swing-from, 3deg));
+  transition-delay: 0.35s;
+}
+
+.wed2-countdown.is-visible .wed2-polaroid-hang-3 .wed2-polaroid-swing {
+  opacity: 1;
+  transform: translateY(0) rotate(var(--swing-from, 6deg));
+  transition-delay: 0.5s;
+}
+
+.wed2-countdown.is-visible .wed2-polaroid-hang-4 .wed2-polaroid-swing {
+  opacity: 1;
+  transform: translateY(0) rotate(var(--swing-from, -4deg));
+  transition-delay: 0.65s;
+}
+
+.wed2-countdown.is-swinging .wed2-polaroid-hang-1 .wed2-polaroid-swing,
+.wed2-countdown.is-swinging .wed2-polaroid-hang-2 .wed2-polaroid-swing,
+.wed2-countdown.is-swinging .wed2-polaroid-hang-3 .wed2-polaroid-swing,
+.wed2-countdown.is-swinging .wed2-polaroid-hang-4 .wed2-polaroid-swing {
+  animation: wed2PolaroidSwing var(--swing-duration, 4s) ease-in-out infinite;
+  animation-delay: var(--swing-delay, 0s);
+  transition: none;
+}
+
+.wed2-polaroid {
+  width: 100%;
+  margin: 0;
+  background: var(--wed2-paper);
+  padding: 12px 12px 34px;
+  border: 1px solid rgba(139, 41, 66, 0.14);
+  box-shadow:
+    0 8px 22px rgba(139, 41, 66, 0.14),
+    0 2px 6px rgba(0, 0, 0, 0.06);
+}
+
+.wed2-polaroid.is-hidden {
+  display: none;
+}
+
+.wed2-polaroid-img {
+  width: 100%;
+  aspect-ratio: 4 / 5;
+  overflow: hidden;
+  background: var(--wed2-pastel-blush);
+}
+
+.wed2-polaroid-img img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.wed2-polaroid-caption {
+  margin-top: 0.65rem;
+  font-family: 'Great Vibes', cursive;
+  font-size: clamp(1.05rem, 4.2vw, 1.35rem);
+  line-height: 1.2;
+  text-align: center;
+  color: var(--wed2-red);
+}
+
+/* Message */
+.wed2-ornament-row {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  color: var(--wed2-section-accent);
+  font-size: 1rem;
+  margin-bottom: 1rem;
+}
+
+.wed2-invitation-message {
+  font-size: clamp(1.1rem, 4vw, 1.35rem);
+  line-height: 1.75;
+  color: var(--wed2-section-fg);
+  max-width: 480px;
+  margin: 0 auto 1.5rem;
+}
+
+.wed2-message-blessing {
+  max-width: 440px;
+  margin: 0 auto 1.35rem;
+  text-align: center;
+}
+
+.wed2-message-blessing-image {
+  display: block;
+  width: min(100%, 220px);
+  height: auto;
+  margin: 0 auto 0.9rem;
+}
+
+.wed2-message-blessing-text {
+  margin: 0;
+  font-family: 'Cormorant Garamond', serif;
+  font-size: clamp(1.05rem, 3.9vw, 1.28rem);
+  font-style: italic;
+  font-weight: 600;
+  line-height: 1.85;
+  letter-spacing: 0.02em;
+  color: var(--wed2-section-heading);
+}
+
+.wed2-message-blessing-separator {
+  display: flex;
+  justify-content: center;
+  gap: 0.85rem;
+  margin: 0.9rem 0 0;
+  color: var(--wed2-section-accent);
+  font-size: 0.95rem;
+}
+
+.wed2-closing {
+  font-family: 'Great Vibes', cursive;
+  font-size: clamp(1.6rem, 5vw, 2.2rem);
+  color: var(--wed2-section-heading);
+}
+
+.wed2-closing-top,
+.wed2-closing-bottom {
+  display: inline-block;
+}
+
+.wed2-closing-bottom {
+  font-family: 'Playfair Display', serif;
+  font-size: clamp(1rem, 3.6vw, 1.28rem);
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  margin-top: 0.35rem;
+}
+
+.wed2-closing-bottom.wed2-closing-bottom-proper {
+  text-transform: none;
+  letter-spacing: 0.03em;
+}
+
+#wed2-message-section {
+  padding-bottom: 0.6rem;
+}
+
+@keyframes wed2FadeUp {
+  from { opacity: 0; transform: translateY(16px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+/* Reduced motion */
+@media (prefers-reduced-motion: reduce) {
+  .wed2-bismillah,
+  .wed2-bismillah-wrap,
+  .wed2-hero-verse,
+  .wed2-ring-wrap,
+  .wed2-ring-name,
+  .wed2-ring-amp,
+  .wed2-name,
+  .wed2-amp,
+  .wed2-reveal,
+  .wed2-envelope-panel,
+  .wed2-envelope-scene,
+  .wed2-seal,
+  .wed2-tassel,
+  .wed2-tassel-thread,
+  .wed2-hero-floral,
+  .wed2-hero-couple {
+    animation: none !important;
+    transition: none !important;
+  }
+
+  .wed2-hero.is-floral-revealed .wed2-hero-floral,
+  .wed2-hero.is-floral-revealed .wed2-hero-couple {
+    opacity: 1;
+    translate: 0 0;
+    transform: none;
+  }
+
+  .wed2-hero.is-floral-revealed .wed2-hero-floral-tl {
+    transform: translateY(-100%) scaleY(-1);
+  }
+
+  .wed2-bismillah { opacity: 1; transform: scale(1); }
+  .wed2-bismillah-wrap {
+    top: var(--wed2-bismillah-settle-top);
+    width: min(52vw, 240px);
+    max-width: 240px;
+    transform: translate(-50%, 0);
+  }
+  .wed2-hero-verse {
+    opacity: 1;
+    transform: translateX(-50%);
+  }
+  .wed2-ring-wrap {
+    opacity: 1;
+    transform: translate(-50%, -50%) scale(1);
+  }
+  .wed2-ring-name,
+  .wed2-ring-amp {
+    opacity: 1;
+    transform: none;
+  }
+  .wed2-ring-amp {
+    transform: translate(-50%, -50%) scale(1);
+  }
+  .wed2-name, .wed2-amp { opacity: 1; transform: none; }
+  .wed2-reveal { opacity: 1; transform: none; }
+  .wed2-countdown.is-visible .wed2-polaroid-swing {
+    opacity: 1;
+    transition: none;
+    animation: none;
+    transform: rotate(var(--swing-from, -4deg));
+  }
+  .wed2-countdown.is-swinging .wed2-polaroid-swing {
+    animation: none;
+  }
+  .wed2-petals {
+    display: none;
+  }
+  .wed2-envelope.is-open .wed2-envelope-panel-left { transform: translateX(-102%); }
+  .wed2-envelope.is-open .wed2-envelope-panel-right { transform: translateX(102%); }
+}
+
+@media (min-width: 481px) and (max-width: 1024px) {
+  .wed2-hero {
+    --wed2-bismillah-settle-top: 6%;
+  }
+
+  body.wed2-has-hero-verse .wed2-hero {
+    --wed2-bismillah-settle-top: 9%;
+  }
+
+  body.wed2-has-hero-verse {
+    --wed2-hero-verse-top: 33%;
+  }
+
+  body.wed2-has-hero-verse .wed2-ring-wrap {
+    top: 51%;
+  }
+
+  .wed2-ring-wrap {
+    width: 280px;
+  }
+
+  body.wed2-ring-larger .wed2-ring-wrap {
+    width: 290px;
+  }
+
+  body.wed2-ring-xl .wed2-ring-wrap {
+    width: 320px;
+  }
+
+  body.wed2-ring-higher .wed2-ring-wrap {
+    top: 42%;
+  }
+
+  .wed2-ring-name {
+    font-size: 2.65rem;
+  }
+
+  body.wed2-ring-names-smaller .wed2-ring-name {
+    font-size: 2.5rem;
+  }
+
+  body.wed2-ring-names-smaller.wed2-ring-font-allura .wed2-ring-name {
+    font-size: 2.4rem;
+  }
+
+  .wed2-ring-amp {
+    font-size: 2.2rem;
+  }
+
+  .wed2-ring-name-bride {
+    right: 12%;
+  }
+
+  body.wed2-bride-name-shift-left .wed2-ring-name-bride {
+    right: 20%;
+  }
+
+  body.wed2-general.wed2-bride-name-shift-left .wed2-ring-name-bride,
+  body.wed2-general.wed2-bride-name-shift-more-left .wed2-ring-name-bride {
+    right: 10%;
+  }
+
+  body.wed2-bride-name-shift-extra-left .wed2-ring-name-bride {
+    right: 28%;
+  }
+
+  body.wed2-bride-name-shift-further-left .wed2-ring-name-bride {
+    right: 34%;
+  }
+
+  body.wed2-bride-first.wed2-groom-name-shift-left .wed2-ring-name-groom {
+    right: 22%;
+  }
+}
+
+@media (max-width: 480px) {
+  .wed2-tassel { left: 0.85rem; }
+  .wed2-hero-deco {
+    --wed2-border-inset: 0.35rem;
+    --wed2-border-thick: clamp(0.85rem, 2.8vh, 1.35rem);
+  }
+  .wed2-code-corner-br {
+    width: clamp(3.5rem, 14vw, 5.5rem);
+    height: clamp(3.5rem, 14vw, 5.5rem);
+  }
+  .wed2-hero-floral-tl { width: min(48vw, 210px); max-height: 44vh; top: -2.5vh; left: -10vw; }
+  .wed2-hero-floral-tr { width: min(42vw, 180px); max-height: 30vh; top: -2.5vh; right: -4vw; }
+  .wed2-hero-couple { width: min(92vw, 320px); max-height: 52vh; }
+  .wed2-ring-wrap { width: min(74vw, 260px); top: 48%; }
+  body.wed2-ring-larger .wed2-ring-wrap { width: min(76vw, 275px); }
+  body.wed2-ring-xl .wed2-ring-wrap { width: min(84vw, 300px); }
+  body.wed2-ring-higher .wed2-ring-wrap { top: 42%; }
+  body.wed2-has-hero-verse {
+    --wed2-hero-verse-top: 32%;
+  }
+  body.wed2-has-hero-verse .wed2-hero {
+    --wed2-bismillah-settle-top: 8%;
+  }
+  body.wed2-has-hero-verse .wed2-ring-wrap { width: min(74vw, 260px); top: 54%; }
+  .wed2-ring-name { font-size: clamp(2rem, 7.5vw, 3rem); }
+  body.wed2-ring-names-smaller .wed2-ring-name {
+    font-size: clamp(1.9rem, 6.8vw, 2.8rem);
+  }
+  body.wed2-ring-names-smaller.wed2-ring-font-allura .wed2-ring-name {
+    font-size: clamp(1.85rem, 6.6vw, 2.7rem);
+  }
+  .wed2-details-card { padding: 1.7rem 1rem; border-radius: 22px; }
+  .wed2-details-couple { grid-template-columns: 1fr; gap: 0.9rem; }
+  .wed2-details-divider { flex-direction: row; min-width: 0; }
+  .wed2-details-divider-line { width: 3.2rem; height: 1px; flex: 0 0 3.2rem; }
+  .wed2-hero-content { padding-bottom: 38%; }
+  .wed2-counter-grid { gap: 0.5rem; }
+  .wed2-counter-cell { padding: 0.75rem 0.25rem; }
+  .wed2-polaroid-row { gap: 0.5rem; margin-top: 2.5rem; }
+  .wed2-polaroid-swing { width: clamp(78px, 22vw, 118px); }
+  .wed2-polaroid { padding: 10px 10px 28px; }
+}
+</style>
+
+</head>
+<body
+  class="wed2-ring-font-allura wed2-bride-name-shift-left wed2-bride-name-shift-more-left"
+  data-style-picker="false"
+  data-groom-name="Imtiyaz"
+  data-bride-name="Aalia"
+  data-groom-parent-prefix="Son of"
+  data-groom-parents-name="Mr Thamimun Ansari"
+  data-bride-parent-prefix="Daughter of"
+  data-bride-parents-name="Mr Farook"
+  data-parent-prefix="Son of"
+  data-parents-name="Mr Thamimun Ansar"
+  data-event-date="2026-08-30"
+  data-event-time="11:30 AM "
+  data-event-address="Bride's Residence
+  "
+  data-map-link="https://www.google.com/maps/place/Kodikkalpalayam+Muhaiyadeen+Andavargal+Pallivasal+(Big+Mosque)/@10.7770969,79.6367487,3108m/data=!3m1!1e3!4m15!1m8!3m7!1s0x3a5547367c766cb1:0xd4faf51a7d83943d!2sKodikkalpalayam,+Thiruvarur,+Tamil+Nadu!3b1!8m2!3d10.7753829!4d79.6417893!16s%2Fm%2F0j_63yw!3m5!1s0x3a554756a1f532bf:0xf3eec9f377045bf4!8m2!3d10.7833049!4d79.6446492!16s%2Fg%2F11h2lfs6_j?entry=ttu&g_ep=EgoyMDI2MDcxNS4wIKXMDSoASAFQAw%3D%3D"
+  data-map-embed="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3887.996!2d80.2707!3d13.0827!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMTPCsDA0JzU3LjciTiA4MMKwMTYnMTQuNSJF!5e0!3m2!1sen!2sin!4v1700000000000"
+  data-quote="And among His signs is that He created for you mates from among yourselves, that you may dwell in tranquility with them, and He has put love and mercy between your hearts."
+  data-invitation-message="With hearts full of joy, we request the honor of your presence as we begin our journey together. Your blessings and company would mean the world to us on this blessed day."
+  data-event-1-title="Nikkah Ceremony"
+  data-event-1-time="11:30 AM"
+  data-event-2-title="Walima"
+  data-event-2-time="12:30 PM"
+  data-event-3-title="Lunch"
+  data-event-3-time="1:00 PM"
+  data-event-4-title=""
+  data-event-4-time=""
+ data-couple-photo="img/red-gAndb.png"
+  data-polaroid-count="4"
+  data-polaroid-1-caption="Together"
+  data-polaroid-2-caption="Forever"
+  data-polaroid-3-caption="Always"
+  data-polaroid-4-caption="Blessed">
+
+  <audio id="wed2-music" preload="auto" aria-label="Wedding background music">
+    <source src="mp3/Aalia.mp3" type="audio/mpeg">
+  </audio>
+
+
+  <main class="wed2-page">
+    <!-- Session 1: Closed envelope with monogram seal -->
+    <section class="wed2-session wed2-session-cover" id="wed2-session-cover" aria-label="Save the date cover" aria-hidden="true">
+      <div class="wed2-envelope-scene" id="wed2-cover">
+        <div class="wed2-tassel" id="wed2-tassel" role="button" aria-label="Press and pull tassel down to open invitation" tabindex="0">
+          <span class="wed2-tassel-string"></span>
+          <span class="wed2-tassel-cap"></span>
+          <span class="wed2-tassel-fringes">
+            <span class="wed2-tassel-ropes">
+              <span class="wed2-tassel-thread"></span>
+              <span class="wed2-tassel-thread"></span>
+              <span class="wed2-tassel-thread"></span>
+              <span class="wed2-tassel-thread"></span>
+              <span class="wed2-tassel-thread"></span>
+              <span class="wed2-tassel-thread"></span>
+              <span class="wed2-tassel-thread"></span>
+              <span class="wed2-tassel-thread"></span>
+              <span class="wed2-tassel-thread"></span>
+              <span class="wed2-tassel-thread"></span>
+              <span class="wed2-tassel-thread"></span>
+              <span class="wed2-tassel-thread"></span>
+              <span class="wed2-tassel-thread"></span>
+              <span class="wed2-tassel-thread"></span>
+              <span class="wed2-tassel-thread"></span>
+              <span class="wed2-tassel-thread"></span>
+              <span class="wed2-tassel-thread"></span>
+              <span class="wed2-tassel-thread"></span>
+              <span class="wed2-tassel-thread"></span>
+            </span>
+          </span>
+        </div>
+        <div class="wed2-envelope" id="wed2-envelope">
+          <div class="wed2-envelope-back" aria-hidden="true"></div>
+          <div class="wed2-envelope-fold-bottom" aria-hidden="true"></div>
+          <div class="wed2-envelope-panel wed2-envelope-panel-left" aria-hidden="true">
+            <span class="wed2-panel-inner"></span>
+          </div>
+          <div class="wed2-envelope-panel wed2-envelope-panel-right" aria-hidden="true">
+            <span class="wed2-panel-inner"></span>
+          </div>
+          <div class="wed2-envelope-crease" aria-hidden="true"></div>
+          <button type="button" class="wed2-seal" id="wed2-save-date-btn" aria-label="Open invitation">
+            <span class="wed2-seal-ring" aria-hidden="true"></span>
+            <span class="wed2-seal-monogram">
+              <span class="wed2-seal-line">Save</span>
+              <span class="wed2-seal-line wed2-seal-line-small">the</span>
+              <span class="wed2-seal-line">Date</span>
+            </span>
+          </button>
+        </div>
+      </div>
+    </section>
+
+    <!-- Session 2: Scrollable invitation -->
+    <section class="wed2-session wed2-session-invite" id="wed2-session-invite" aria-hidden="true" aria-label="Wedding invitation">
+      <button type="button" class="wed2-mute-btn" id="wed2-mute-btn" aria-label="Mute music" aria-hidden="true">🔊</button>
+      <div class="wed2-petals" id="wed2-petals" aria-hidden="true"></div>
+
+      <div class="wed2-scroll-page" id="wed2-scroll-page">
+          <!-- Section A: Hero (decorated first screen only) -->
+          <header class="wed2-hero" id="wed2-hero">
+            <div class="wed2-hero-deco" aria-hidden="true">
+              <div class="wed2-code-border-fill"></div>
+              <img class="wed2-hero-floral wed2-hero-floral-tl" src="img/red-3.png" alt="" loading="eager" decoding="async">
+              <img class="wed2-hero-floral wed2-hero-floral-tr" src="img/red-1.png" alt="" loading="eager" decoding="async">
+              <div class="wed2-hero-code-border">
+                <span class="wed2-code-edge wed2-code-edge-bottom"></span>
+                <span class="wed2-code-edge wed2-code-edge-right"></span>
+                <span class="wed2-code-edge wed2-code-edge-left"></span>
+                <span class="wed2-code-edge wed2-code-edge-top"></span>
+                <svg class="wed2-code-corner-br" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                  <path class="wed2-code-vine" d="M 8 92 C 22 78 38 88 52 74 S 78 58 92 42" />
+                  <path class="wed2-code-vine wed2-code-vine-gold" d="M 12 96 C 28 84 44 90 58 78" />
+                  <ellipse class="wed2-code-leaf" cx="24" cy="86" rx="7" ry="3.5" transform="rotate(-38 24 86)" />
+                  <ellipse class="wed2-code-leaf" cx="46" cy="80" rx="6" ry="3" transform="rotate(28 46 80)" />
+                  <ellipse class="wed2-code-leaf" cx="68" cy="66" rx="7" ry="3.2" transform="rotate(-22 68 66)" />
+                  <circle class="wed2-code-flower" cx="34" cy="88" r="4.2" />
+                  <circle class="wed2-code-flower" cx="58" cy="74" r="3.6" />
+                  <circle class="wed2-code-flower" cx="78" cy="54" r="4" />
+                  <circle class="wed2-code-flower-core" cx="34" cy="88" r="1.6" />
+                  <circle class="wed2-code-flower-core" cx="58" cy="74" r="1.4" />
+                  <circle class="wed2-code-flower-core" cx="78" cy="54" r="1.5" />
+                </svg>
+                <svg class="wed2-code-frame" viewBox="0 0 100 100" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                  <path class="wed2-code-vine" vector-effect="non-scaling-stroke" d="M 1.2 98.8 C 12 97.2 20 99.4 30 98.6 S 48 97 58 98.8 S 74 99.2 86 98.4 S 94 97.6 98.8 98.8" />
+                  <path class="wed2-code-vine" vector-effect="non-scaling-stroke" d="M 98.8 1.2 C 97.2 14 99.4 24 98.6 34 S 97 50 98.8 60 S 99.2 74 98.4 86 S 97.6 94 98.8 98.8" />
+                  <path class="wed2-code-vine" vector-effect="non-scaling-stroke" d="M 1.2 1.2 C 2.4 14 0.8 24 1.2 34 S 2.2 50 1.2 60 S 0.8 74 1.2 86 S 2.2 94 1.2 98.8" />
+                  <path class="wed2-code-vine" vector-effect="non-scaling-stroke" d="M 1.2 1.2 C 14 2.4 24 0.8 34 1.2 S 50 2.2 60 1.2 S 74 0.8 86 1.2 S 94 2.2 98.8 1.2" />
+                  <path class="wed2-code-vine wed2-code-vine-gold" vector-effect="non-scaling-stroke" d="M 2 97.6 C 14 96.2 26 98 38 97.2 S 62 96.4 74 97.6 S 88 98.2 97.6 97.4" />
+                  <path class="wed2-code-vine wed2-code-vine-gold" vector-effect="non-scaling-stroke" d="M 97.6 2 C 96.2 16 98 28 97.2 40 S 96.4 64 97.6 76 S 98.2 90 97.4 97.6" />
+                  <path class="wed2-code-vine wed2-code-vine-gold" vector-effect="non-scaling-stroke" d="M 2 2 C 2.8 16 1.6 28 2 40 S 2.6 52 2 64 S 1.6 76 2 88 S 2.6 94 2 97.6" />
+                  <path class="wed2-code-vine wed2-code-vine-gold" vector-effect="non-scaling-stroke" d="M 2 2 C 16 2.8 28 1.6 40 2 S 52 2.6 64 2 S 76 1.6 88 2 S 94 2.6 97.6 2" />
+                  <circle class="wed2-code-flower" vector-effect="non-scaling-stroke" cx="14" cy="98.2" r="1.1" />
+                  <circle class="wed2-code-flower" vector-effect="non-scaling-stroke" cx="42" cy="98.6" r="0.95" />
+                  <circle class="wed2-code-flower" vector-effect="non-scaling-stroke" cx="70" cy="98.1" r="1.05" />
+                  <circle class="wed2-code-flower" vector-effect="non-scaling-stroke" cx="98.2" cy="22" r="1.1" />
+                  <circle class="wed2-code-flower" vector-effect="non-scaling-stroke" cx="98.5" cy="52" r="0.95" />
+                  <circle class="wed2-code-flower" vector-effect="non-scaling-stroke" cx="98.1" cy="78" r="1.05" />
+                  <circle class="wed2-code-flower" vector-effect="non-scaling-stroke" cx="1.8" cy="22" r="0.9" />
+                  <circle class="wed2-code-flower" vector-effect="non-scaling-stroke" cx="1.9" cy="42" r="0.85" />
+                  <circle class="wed2-code-flower" vector-effect="non-scaling-stroke" cx="1.8" cy="68" r="0.9" />
+                  <circle class="wed2-code-flower" vector-effect="non-scaling-stroke" cx="1.9" cy="88" r="0.85" />
+                  <circle class="wed2-code-flower" vector-effect="non-scaling-stroke" cx="22" cy="1.8" r="0.9" />
+                  <circle class="wed2-code-flower" vector-effect="non-scaling-stroke" cx="42" cy="1.9" r="0.85" />
+                  <circle class="wed2-code-flower" vector-effect="non-scaling-stroke" cx="68" cy="1.8" r="0.9" />
+                  <circle class="wed2-code-flower" vector-effect="non-scaling-stroke" cx="88" cy="1.9" r="0.85" />
+                  <ellipse class="wed2-code-leaf" vector-effect="non-scaling-stroke" cx="26" cy="98" rx="2.2" ry="1" transform="rotate(-32 26 98)" />
+                  <ellipse class="wed2-code-leaf" vector-effect="non-scaling-stroke" cx="56" cy="98.4" rx="2" ry="0.9" transform="rotate(24 56 98.4)" />
+                  <ellipse class="wed2-code-leaf" vector-effect="non-scaling-stroke" cx="98" cy="36" rx="2.1" ry="0.95" transform="rotate(-40 98 36)" />
+                  <ellipse class="wed2-code-leaf" vector-effect="non-scaling-stroke" cx="98.3" cy="64" rx="2" ry="0.9" transform="rotate(30 98.3 64)" />
+                  <ellipse class="wed2-code-leaf" vector-effect="non-scaling-stroke" cx="1.7" cy="28" rx="1.8" ry="0.85" transform="rotate(35 1.7 28)" />
+                  <ellipse class="wed2-code-leaf" vector-effect="non-scaling-stroke" cx="1.7" cy="58" rx="1.8" ry="0.85" transform="rotate(35 1.7 58)" />
+                  <ellipse class="wed2-code-leaf" vector-effect="non-scaling-stroke" cx="28" cy="1.7" rx="1.8" ry="0.85" transform="rotate(-35 28 1.7)" />
+                  <ellipse class="wed2-code-leaf" vector-effect="non-scaling-stroke" cx="58" cy="1.7" rx="1.8" ry="0.85" transform="rotate(-35 58 1.7)" />
+                </svg>
+              </div>
+            </div>
+            <img class="wed2-hero-couple" id="wed2-hero-couple" src="img/red-gAndb.png" alt="Bride and groom" loading="eager" decoding="async">
+            <div class="wed2-bismillah-wrap" aria-hidden="true">
+              <img class="wed2-bismillah" src="img/bismillah.png" alt="Bismillah" loading="eager" decoding="async">
+            </div>
+            <div class="wed2-ring-wrap" id="wed2-ring-wrap" aria-hidden="true">
+              <img class="wed2-ring" src="img/red-ring-2.png" alt="" loading="eager" decoding="async">
+              <div class="wed2-ring-names">
+                <span class="wed2-ring-name wed2-ring-name-groom" id="wed2-groom-name"></span>
+                <span class="wed2-ring-amp" aria-hidden="true">&amp;</span>
+                <span class="wed2-ring-name wed2-ring-name-bride" id="wed2-bride-name"></span>
+              </div>
+            </div>
+          </header>
+
+          <!-- Section B: Quote -->
+          <section class="wed2-section wed2-quote wed2-reveal" id="wed2-quote-section">
+            <span class="wed2-ornament" aria-hidden="true">❦</span>
+            <blockquote class="wed2-quote-text" id="wed2-quote-text"></blockquote>
+            <span class="wed2-ornament" aria-hidden="true">❦</span>
+          </section>
+
+          <!-- Section C: Scratch date -->
+          <section class="wed2-section wed2-scratch wed2-reveal" id="wed2-scratch-section">
+            <h2 class="wed2-section-title">Save the Date</h2>
+            <p class="wed2-scratch-hint">Scratch to reveal the date</p>
+            <div class="wed2-scratch-burst" id="wed2-scratch-burst" aria-hidden="true"></div>
+            <div class="wed2-scratch-card" id="wed2-scratch-card">
+              <div class="wed2-scroll-cap wed2-scroll-cap-top" aria-hidden="true"></div>
+              <div class="wed2-scroll-panel" id="wed2-scroll-panel">
+                <div class="wed2-scratch-reveal" id="wed2-scratch-reveal">
+                  <p class="wed2-scratch-month" id="wed2-scratch-month">AUGUST</p>
+                  <p class="wed2-scratch-day" id="wed2-scratch-day">Sunday, 30</p>
+                  <p class="wed2-scratch-year" id="wed2-scratch-year">2026</p>
+                  <p class="wed2-scratch-time" id="wed2-scratch-time">11:30 AM — 2:00 PM</p>
+                </div>
+                <canvas class="wed2-scratch-canvas" id="wed2-scratch-canvas" aria-label="Scratch to reveal wedding date"></canvas>
+              </div>
+              <div class="wed2-scroll-cap wed2-scroll-cap-bottom" aria-hidden="true"></div>
+            </div>
+            <button type="button" class="wed2-reveal-btn" id="wed2-reveal-btn" hidden>Reveal date</button>
+          </section>
+
+          <!-- Section D: Full invitation details -->
+          <section class="wed2-section wed2-details wed2-reveal" id="wed2-details-section">
+            <div class="wed2-details-card">
+              <div class="wed2-details-card-border" aria-hidden="true"></div>
+              <span class="wed2-details-bismillah">In the name of Allah</span>
+              <span class="wed2-details-greeting">With joy and gratitude</span>
+              <p class="wed2-details-welcome">
+                With immense joy and gratitude, we warmly welcome you to join us and bless the beginning of our new journey together.
+              </p>
+
+              <div class="wed2-details-couple">
+                <article class="wed2-details-person">
+                  <p class="wed2-details-role">Groom</p>
+                  <h2 class="wed2-details-name" id="wed2-details-groom-name">Imtiyaz</h2>
+                  <p class="wed2-details-parents-prefix" id="wed2-details-groom-prefix">Son of</p>
+                  <p class="wed2-details-parents-name" id="wed2-details-groom-parents">Mr Hassan &amp; Mrs Aisha</p>
+                </article>
+
+                <div class="wed2-details-divider" aria-hidden="true">
+                  <span class="wed2-details-divider-line"></span>
+                  <span class="wed2-details-divider-mark">and</span>
+                  <span class="wed2-details-divider-line"></span>
+                </div>
+
+                <article class="wed2-details-person">
+                  <p class="wed2-details-role">Bride</p>
+                  <h2 class="wed2-details-name" id="wed2-details-bride-name">Aalia</h2>
+                  <p class="wed2-details-parents-prefix" id="wed2-details-bride-prefix">Daughter of</p>
+                  <p class="wed2-details-parents-name" id="wed2-details-bride-parents">Mr Hassan &amp; Mrs Aisha</p>
+                </article>
+              </div>
+
+              <div class="wed2-details-event">
+                <div class="wed2-details-event-block">
+                  <p class="wed2-details-label">Date &amp; Time</p>
+                  <p class="wed2-details-value" >Sunday, 30 August 2026 </p>
+                </div>
+
+                <div class="wed2-details-event">
+                  <div class="wed2-details-event-block">
+                    <p class="wed2-details-label">Nikkah Time</p>
+                    <p class="wed2-details-value" id="wed2-details-datetime">at 11:30 AM</p>
+                  </div>
+                <div class="wed2-details-event-block">
+                  <p class="wed2-details-label">Venue</p>
+                  <p class="wed2-details-value">Bride's Residence </p>
+                    <p>No. 20, Malaya Street,
+                      Kodikkalpalayam, Thiruvarur – 610001</p>
+                </div>
+              </div>
+            </div>
+          </section>
+
+          <!-- Section E: Timeline -->
+          <section class="wed2-section wed2-timeline wed2-reveal" id="wed2-timeline-section">
+            <h2 class="wed2-section-title">Event Timeline</h2>
+            <ol class="wed2-timeline-list" id="wed2-timeline-list">
+              <li class="wed2-timeline-item" data-slot="1">
+                <span class="wed2-timeline-dot" aria-hidden="true"></span>
+                <div class="wed2-timeline-card">
+                  <h3 class="wed2-timeline-title" id="wed2-event-1-title">Nikkah Ceremony</h3>
+                  <p class="wed2-timeline-time" id="wed2-event-1-time">11:30 AM</p>
+                </div>
+              </li>
+              <li class="wed2-timeline-item" data-slot="2">
+                <span class="wed2-timeline-dot" aria-hidden="true"></span>
+                <div class="wed2-timeline-card">
+                  <h3 class="wed2-timeline-title" id="wed2-event-2-title">Reception</h3>
+                  <p class="wed2-timeline-time" id="wed2-event-2-time">4:00 PM</p>
+                </div>
+              </li>
+              <!-- <li class="wed2-timeline-item" data-slot="3">
+                <span class="wed2-timeline-dot" aria-hidden="true"></span>
+                <div class="wed2-timeline-card">
+                  <h3 class="wed2-timeline-title" id="wed2-event-3-title">Dinner</h3>
+                  <p class="wed2-timeline-time" id="wed2-event-3-time">6:30 PM</p>
+                </div>
+              </li> -->
+              <li class="wed2-timeline-item" data-slot="4">
+                <span class="wed2-timeline-dot" aria-hidden="true"></span>
+                <div class="wed2-timeline-card">
+                  <h3 class="wed2-timeline-title" id="wed2-event-4-title"></h3>
+                  <p class="wed2-timeline-time" id="wed2-event-4-time"></p>
+                </div>
+              </li>
+            </ol>
+          </section>
+
+         <!-- Section F: Map -->
+         <section class="wed2-section wed2-map wed2-reveal" id="wed2-map-section">
+          <h2 class="wed2-section-title">Venue</h2>
+          <p class="wed2-address" id="wed2-address-text">
+            Mahasoom Mahal<br>
+            Kodikkalpalayam, Thiruvarur
+          </p>
+          <div class="wed2-map-frame" id="wed2-map-frame">
+            <iframe
+              class="wed2-map-iframe"
+              id="wed2-map-iframe"
+              title="Wedding venue map"
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d13534.337673267168!2d79.63674868615837!3d10.777096909315029!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3a554756a1f532bf%3A0xf3eec9f377045bf4!2sKodikkalpalayam%20Muhaiyadeen%20Andavargal%20Pallivasal%20(Big%20Mosque)!5e1!3m2!1sen!2sin!4v1784400612545!5m2!1sen!2sin"
+              loading="lazy"
+              allowfullscreen>
+            </iframe>
+          </div>
+          <a class="wed2-btn wed2-btn-map" id="wed2-map-link" href="https://maps.app.goo.gl/YourNewLinkHere" target="_blank" rel="noopener noreferrer">View on Google Maps</a>
+        </section>
+
+          <!-- Section G: Countdown -->
+          <section class="wed2-section wed2-countdown wed2-reveal" id="wed2-countdown-section">
+            <h2 class="wed2-section-title">Counting Down</h2>
+            <div class="wed2-counter-stage" id="wed2-counter-stage">
+              <svg class="wed2-polaroid-threads-svg" id="wed2-polaroid-threads" aria-hidden="true" focusable="false"></svg>
+              <div class="wed2-counter-grid">
+                <div class="wed2-counter-cell wed2-counter-anchor" id="wed2-counter-days">
+                  <span class="wed2-counter-num" id="wed2-days">0</span>
+                  <small>Days</small>
+                </div>
+                <div class="wed2-counter-cell wed2-counter-anchor" id="wed2-counter-hours">
+                  <span class="wed2-counter-num" id="wed2-hours">0</span>
+                  <small>Hours</small>
+                </div>
+                <div class="wed2-counter-cell wed2-counter-anchor" id="wed2-counter-minutes">
+                  <span class="wed2-counter-num" id="wed2-minutes">0</span>
+                  <small>Minutes</small>
+                </div>
+                <div class="wed2-counter-cell wed2-counter-anchor" id="wed2-counter-seconds">
+                  <span class="wed2-counter-num" id="wed2-seconds">0</span>
+                  <small>Seconds</small>
+                </div>
+              </div>
+              <div class="wed2-polaroid-row" id="wed2-polaroid-row" aria-label="Couple memories">
+                <div class="wed2-polaroid-hang wed2-polaroid-hang-1" data-slot="1" data-counter-id="wed2-counter-days">
+                  <div class="wed2-polaroid-swing">
+                    <figure class="wed2-polaroid wed2-polaroid-1">
+                      <div class="wed2-polaroid-img">
+                        <img
+                          src="img/1.jpeg"
+                          alt="Couple memory 1"
+                          loading="lazy"
+                          decoding="async">
+                      </div>
+                      <figcaption class="wed2-polaroid-caption" id="wed2-polaroid-1-caption">Together ♥</figcaption>
+                    </figure>
+                  </div>
+                </div>
+                <div class="wed2-polaroid-hang wed2-polaroid-hang-2" data-slot="2" data-counter-id="wed2-counter-hours">
+                  <div class="wed2-polaroid-swing">
+                    <figure class="wed2-polaroid wed2-polaroid-2">
+                      <div class="wed2-polaroid-img">
+                        <img
+                          src="img/2.jpeg"
+                          alt="Couple memory 2"
+                          loading="lazy"
+                          decoding="async">
+                      </div>
+                      <figcaption class="wed2-polaroid-caption" id="wed2-polaroid-2-caption">Forever</figcaption>
+                    </figure>
+                  </div>
+                </div>
+                <div class="wed2-polaroid-hang wed2-polaroid-hang-3" data-slot="3" data-counter-id="wed2-counter-minutes">
+                  <div class="wed2-polaroid-swing">
+                    <figure class="wed2-polaroid wed2-polaroid-3">
+                      <div class="wed2-polaroid-img">
+                        <img
+                          src="img/3.jpeg"
+                          alt="Couple memory 3"
+                          loading="lazy"
+                          decoding="async">
+                      </div>
+                      <figcaption class="wed2-polaroid-caption" id="wed2-polaroid-3-caption">Always</figcaption>
+                    </figure>
+                  </div>
+                </div>
+                <div class="wed2-polaroid-hang wed2-polaroid-hang-4" data-slot="4" data-counter-id="wed2-counter-seconds">
+                  <div class="wed2-polaroid-swing">
+                    <figure class="wed2-polaroid wed2-polaroid-4">
+                      <div class="wed2-polaroid-img">
+                        <img
+                          src="img/4.jpeg"
+                          alt="Couple memory 4"
+                          loading="lazy"
+                          decoding="async">
+                      </div>
+                      <figcaption class="wed2-polaroid-caption" id="wed2-polaroid-4-caption">Blessed</figcaption>
+                    </figure>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </section>
+
+          <!-- Section H: Invitation message -->
+          <section class="wed2-section wed2-message wed2-reveal" id="wed2-message-section">
+            <span class="wed2-ornament-row" aria-hidden="true">
+              <span>❦</span><span>❦</span><span>❦</span>
+            </span>
+            <p class="wed2-invitation-message" id="wed2-invitation-message"></p>
+            <p class="wed2-closing">
+              <span class="wed2-closing-top">Best wishes from</span><br>
+              <span class="wed2-closing-bottom">family &amp; friends</span>
+            </p>
+          </section>
+      </div>
+    </section>
+  </main>
+
+  <!-- Note: Leaving your script tags as requested. If your scripts strictly relied on the deleted 'data-storage-path' to load images, they may throw errors. If that happens, let me know! -->
+  <script src="https://www.gstatic.com/firebasejs/9.23.0/firebase-app.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/9.23.0/firebase-storage.js"></script>
+  
+  <script>
+
+
+(function () {
+  'use strict';
+  // Add any global helpers here, e.g. getClientNameFromPath()
+  window.ValentineGlobal = {
+    getClientFromPath: function () {
+      var path = (window.location.pathname || '/').replace(/^\//, '').replace(/\/$/, '');
+      var parts = path.split('/');
+      return parts[0] || null; // first segment is client name
+    }
+  };
+})();
+</script>
+
+
+  <!-- <script src="https://my-bel0ved.web.app/js/firebase-config.js"></script>
+  <script src="https://my-bel0ved.web.app/js/firebase-storage.js"></script> -->
+  <script>
+    /**
+ * Wedding T2: envelope Save the Date cover + scrollable pastel invitation.
+ */
+(function () {
+  'use strict';
+
+  var body = document.body;
+  if (!body) return;
+
+  var sessionCover = document.getElementById('wed2-session-cover');
+  var sessionInvite = document.getElementById('wed2-session-invite');
+  var hero = document.getElementById('wed2-hero');
+  var cover = document.getElementById('wed2-cover');
+  var envelope = document.getElementById('wed2-envelope');
+  var tassel = document.getElementById('wed2-tassel');
+  var saveDateBtn = document.getElementById('wed2-save-date-btn');
+  var audio = document.getElementById('wed2-music');
+  var muteBtn = document.getElementById('wed2-mute-btn');
+  var mapIframe = document.getElementById('wed2-map-iframe');
+  var mapFrame = document.getElementById('wed2-map-frame');
+  var scratchCanvas = document.getElementById('wed2-scratch-canvas');
+  var scratchCard = document.getElementById('wed2-scratch-card');
+  var scrollPanel = document.getElementById('wed2-scroll-panel');
+  var revealBtn = document.getElementById('wed2-reveal-btn');
+
+  var countdownEls = {
+    days: document.getElementById('wed2-days'),
+    hours: document.getElementById('wed2-hours'),
+    minutes: document.getElementById('wed2-minutes'),
+    seconds: document.getElementById('wed2-seconds')
+  };
+
+  var coverOpening = false;
+  var musicGesturePrimed = false;
+  var mapLoaded = false;
+  var nikahMapLoaded = false;
+  var walimaMapLoaded = false;
+  var scrollRevealsInit = false;
+  var scratchInit = false;
+  var polaroidThreadRaf = null;
+  var stylePicker = document.getElementById('wed2-style-picker');
+
+  var SONG_MUSLIM = {
+    path: '/templates%2Fshared%2Faudios%2Feid_song.mp3',
+    token: '5e877635-1778-4f0b-a493-bdb861585d34'
+  };
+  var SONG_GENERAL = {
+    path: '/templates%2Fshared%2Faudios%2Fwedding%20t1%2Fsong.mp3',
+    token: 'd376623f-f5d1-4d43-8a3c-ee7313a799ad'
+  };
+  var COPY_MUSLIM = {
+    quote: 'And among His signs is that He created for you mates from among yourselves, that you may dwell in tranquility with them, and He has put love and mercy between your hearts.',
+    invitationMessage: 'With hearts full of joy, we request the honor of your presence as we begin our journey together. Your blessings and company would mean the world to us on this blessed day.',
+    event1Title: 'Nikkah Ceremony'
+  };
+  var COPY_GENERAL = {
+    quote: 'May our union be blessed with love, harmony and everlasting happiness as we begin our journey together.',
+    invitationMessage: 'With hearts full of joy, we cordially invite you to grace our wedding celebrations and bless us as we begin our new chapter together.',
+    event1Title: 'Wedding Ceremony'
+  };
+  var polaroidThreadsInit = false;
+  var heroScrollLocked = false;
+  var heroScrollUnlockTimer = null;
+  var scrollLockHandler = null;
+  var petalsStarted = false;
+  var scrollHintEl = null;
+  var scrollHintDismissed = false;
+  var PETAL_COUNT = 9;
+  var PETAL_SHADES = [
+    '#fde8ec',
+    '#f8d0d8',
+    '#f0b4c0',
+    '#e8a0ad',
+    '#d98595',
+    '#c96b7e',
+    '#b8556a',
+    '#a84355',
+    '#9a3d50'
+  ];
+
+  function getAttr(name, fallback) {
+    var val = body.getAttribute(name);
+    if (val === null || val === '') return fallback;
+    return val;
+  }
+
+  function setText(id, value) {
+    var el = document.getElementById(id);
+    if (el) el.textContent = value;
+  }
+
+  function setHtml(id, value) {
+    var el = document.getElementById(id);
+    if (el) el.innerHTML = value;
+  }
+
+  function formatParentsName(value) {
+    if (!value) return '';
+    if (value.indexOf('|') === -1) return value;
+    return value.split('|').map(function (line) {
+      return line.trim();
+    }).join('<br>');
+  }
+
+  function formatLongDate(dateRaw, omitYear) {
+    if (!dateRaw) return '';
+    var eventDate = new Date(dateRaw + 'T00:00:00');
+    if (isNaN(eventDate.getTime())) return '';
+    var opts = {
+      weekday: 'long',
+      day: 'numeric',
+      month: 'long'
+    };
+    if (!omitYear) opts.year = 'numeric';
+    return eventDate.toLocaleDateString('en-GB', opts);
+  }
+
+  function formatScratchWeekdayDay(dateRaw) {
+    if (!dateRaw) return '';
+    var eventDate = new Date(dateRaw + 'T00:00:00');
+    if (isNaN(eventDate.getTime())) return '';
+    return eventDate.toLocaleDateString('en-GB', { weekday: 'long' }) + ', ' + eventDate.getDate();
+  }
+
+  function getEventDateRaw(slot) {
+    return getAttr('data-event-' + slot + '-date', '') || getAttr('data-event-date', '');
+  }
+
+  function hasPerEventDates() {
+    return !!getAttr('data-event-1-date', '') || !!getAttr('data-event-2-date', '');
+  }
+
+  function buildScheduleLine(slot, defaultTitle, includeDate, omitYear) {
+    var title = getAttr('data-event-' + slot + '-title', defaultTitle);
+    var time = getAttr('data-event-' + slot + '-time', '');
+    if (includeDate) {
+      var dateStr = formatLongDate(getEventDateRaw(slot), omitYear);
+      if (dateStr && time) return title + ' — ' + dateStr + ' — ' + time;
+      if (dateStr) return title + ' — ' + dateStr;
+    }
+    if (time) return title + ' — ' + time;
+    return title;
+  }
+
+  function buildScratchScheduleLine(slot, defaultTitle, includeDate) {
+    var title = getAttr('data-event-' + slot + '-title', defaultTitle);
+    var time = getAttr('data-event-' + slot + '-time', '');
+    var line = title;
+    if (includeDate) {
+      var dateStr = formatLongDate(getEventDateRaw(slot), true);
+      if (dateStr) line += ' — ' + dateStr;
+    }
+    if (time) {
+      var timeDisplay = time.replace(/ - /g, '\u00a0-\u00a0');
+      line += ' — <span class="wed2-scratch-schedule-time">' + timeDisplay + '</span>';
+    }
+    return line;
+  }
+
+  function buildDetailsScheduleLine(slot, defaultTitle, includeDate) {
+    var title = getAttr('data-event-' + slot + '-title', defaultTitle);
+    var time = getAttr('data-event-' + slot + '-time', '');
+    var line = title;
+    if (includeDate) {
+      var dateStr = formatLongDate(getEventDateRaw(slot), false);
+      if (dateStr) line += ' — ' + dateStr;
+    }
+    if (time) {
+      var timeDisplay = time.replace(/ - /g, '\u00a0-\u00a0');
+      line += ' — <span class="wed2-details-schedule-time">' + timeDisplay + '</span>';
+    }
+    return line;
+  }
+
+  function buildTimelineTimeDisplay(dateRaw, time) {
+    var timePart = time;
+    if (time && body.classList.contains('wed2-details-time-single-line')) {
+      timePart =
+        '<span class="wed2-timeline-schedule-time">' +
+        time.replace(/ - /g, '\u00a0-\u00a0') +
+        '</span>';
+    }
+    if (dateRaw) {
+      var dateStr = formatLongDate(dateRaw);
+      return time ? dateStr + ' — ' + timePart : dateStr;
+    }
+    return timePart || '';
+  }
+
+  function applyBrideFirstOrder() {
+    if (getAttr('data-bride-first', '') !== 'true') return;
+    body.classList.add('wed2-bride-first');
+
+    var couple = document.querySelector('.wed2-details-couple');
+    var groomArticle = document.getElementById('wed2-details-groom-name');
+    groomArticle = groomArticle && groomArticle.closest('.wed2-details-person');
+    var brideArticle = document.getElementById('wed2-details-bride-name');
+    brideArticle = brideArticle && brideArticle.closest('.wed2-details-person');
+    if (couple && groomArticle && brideArticle && brideArticle !== couple.firstElementChild) {
+      couple.insertBefore(brideArticle, groomArticle);
+    }
+  }
+
+  function hydrateDualMaps() {
+    var nikahAddr = getAttr('data-nikah-venue', '');
+    var walimaAddr = getAttr('data-reception-venue', '');
+    setText('wed2-nikah-address-text', nikahAddr);
+    setText('wed2-walima-address-text', walimaAddr);
+
+    var nikahLinkEl = document.getElementById('wed2-nikah-map-link');
+    if (nikahLinkEl) nikahLinkEl.href = getAttr('data-nikah-map-link', '#');
+
+    var walimaLinkEl = document.getElementById('wed2-walima-map-link');
+    if (walimaLinkEl) walimaLinkEl.href = getAttr('data-walima-map-link', '#');
+  }
+
+  function resetScrollToTop() {
+    var scrollPage = document.getElementById('wed2-scroll-page');
+    if (scrollPage) scrollPage.scrollTop = 0;
+    if (window.scrollTo) {
+      window.scrollTo({ top: 0, left: 0, behavior: 'auto' });
+    }
+    if (sessionInvite) sessionInvite.scrollTop = 0;
+  }
+
+  function showSession(target) {
+    if (target === sessionInvite && sessionInvite) {
+      sessionInvite.classList.add('is-active');
+      sessionInvite.removeAttribute('aria-hidden');
+    } else {
+      var sessions = [sessionCover, sessionInvite];
+      sessions.forEach(function (node) {
+        if (!node) return;
+        var isTarget = node === target;
+        node.classList.toggle('is-active', isTarget);
+        if (isTarget) node.removeAttribute('aria-hidden');
+        else node.setAttribute('aria-hidden', 'true');
+      });
+    }
+
+    if (target === sessionInvite) {
+      resetScrollToTop();
+      if (!scrollRevealsInit) {
+        initScrollReveals();
+        scrollRevealsInit = true;
+      }
+      if (!scratchInit) {
+        initScratchCard();
+        scratchInit = true;
+      }
+      requestAnimationFrame(function () {
+        resetScrollToTop();
+      });
+    }
+  }
+
+  var TASSEL_OPEN_RATIO = 0.3;
+
+  function getViewportHeight() {
+    return window.innerHeight || document.documentElement.clientHeight || 0;
+  }
+
+  var FLORAL_ANIM_DELAY_MS = 700;
+  var FLORAL_ANIM_DURATION_MS = 1750;
+  var BISMILLAH_INTRO_DELAY_MS = FLORAL_ANIM_DELAY_MS + 1000;
+  var BISMILLAH_ANIM_DURATION_MS = 950;
+  var HERO_VERSE_DISPLAY_MS = 1100;
+  var RING_ANIM_DURATION_MS = 1000;
+  var RING_NAMES_ANIM_MS = 1200;
+  var HERO_SCROLL_UNLOCK_BUFFER_MS = 250;
+
+  function getHeroScrollUnlockMs() {
+    var total =
+      BISMILLAH_INTRO_DELAY_MS +
+      (hasBismillahIntro() ? BISMILLAH_ANIM_DURATION_MS : 0) +
+      Math.round(RING_ANIM_DURATION_MS * 0.45) +
+      RING_NAMES_ANIM_MS +
+      HERO_SCROLL_UNLOCK_BUFFER_MS;
+    if (body.classList.contains('wed2-has-hero-verse')) {
+      total += HERO_VERSE_DISPLAY_MS;
+    }
+    return total;
+  }
+
+  function hasBismillahIntro() {
+    return !body.classList.contains('wed2-general') && !body.classList.contains('wed2-hindu');
+  }
+
+  function onScrollLockEvent(e) {
+    if (!heroScrollLocked) return;
+    resetScrollToTop();
+    e.preventDefault();
+  }
+
+  function lockInviteScroll() {
+    if (!sessionInvite || heroScrollLocked) return;
+    heroScrollLocked = true;
+    sessionInvite.classList.add('is-scroll-locked');
+    resetScrollToTop();
+
+    if (!scrollLockHandler) {
+      scrollLockHandler = onScrollLockEvent;
+      sessionInvite.addEventListener('wheel', scrollLockHandler, { passive: false });
+      sessionInvite.addEventListener('touchmove', scrollLockHandler, { passive: false });
+    }
+  }
+
+  function unlockInviteScroll() {
+    if (!sessionInvite) return;
+    heroScrollLocked = false;
+    sessionInvite.classList.remove('is-scroll-locked');
+
+    if (scrollLockHandler) {
+      sessionInvite.removeEventListener('wheel', scrollLockHandler);
+      sessionInvite.removeEventListener('touchmove', scrollLockHandler);
+      scrollLockHandler = null;
+    }
+
+    startRosePetals();
+    showHeroScrollHint();
+  }
+
+  function showHeroScrollHint() {
+    if (!scrollHintEl || scrollHintDismissed) return;
+    scrollHintEl.classList.add('is-visible');
+  }
+
+  function dismissHeroScrollHint() {
+    if (!scrollHintEl || scrollHintDismissed) return;
+    scrollHintDismissed = true;
+    scrollHintEl.classList.remove('is-visible');
+    scrollHintEl.classList.add('is-hidden');
+  }
+
+  function initHeroScrollHint() {
+    if (getAttr('data-hero-scroll-hint', 'true') === 'false' || !hero) return;
+
+    scrollHintEl = document.createElement('div');
+    scrollHintEl.className = 'wed2-scroll-hint';
+    scrollHintEl.id = 'wed2-scroll-hint';
+    scrollHintEl.setAttribute('aria-hidden', 'true');
+    scrollHintEl.innerHTML =
+      '<span class="wed2-scroll-hint-chevrons" aria-hidden="true">' +
+      '<span></span><span></span></span>' +
+      '<span class="wed2-scroll-hint-label">Scroll up</span>';
+    hero.appendChild(scrollHintEl);
+
+    if (sessionInvite) {
+      sessionInvite.addEventListener('scroll', function () {
+        if (sessionInvite.scrollTop > 24) dismissHeroScrollHint();
+      }, { passive: true });
+    }
+  }
+
+  function applyCoverMonogram() {
+    var monogram = getAttr('data-cover-monogram', '');
+    if (!monogram) return;
+
+    var monogramWrap = document.querySelector('.wed2-seal-monogram');
+    var sealBtn = document.getElementById('wed2-save-date-btn');
+    if (monogramWrap) {
+      monogramWrap.innerHTML = '<span class="wed2-seal-initials">' + monogram + '</span>';
+    }
+    if (sealBtn) sealBtn.classList.add('is-initials');
+  }
+
+  function applyScratchSectionTitle() {
+    var title = getAttr('data-scratch-section-title', '');
+    if (!title) return;
+
+    var scratchSection = document.getElementById('wed2-scratch-section');
+    var titleEl = scratchSection && scratchSection.querySelector('.wed2-section-title');
+    if (titleEl) titleEl.textContent = title;
+  }
+
+  function createRosePetal(container, index) {
+    var petal = document.createElement('span');
+    petal.className = 'wed2-petal';
+
+    var left = 4 + Math.random() * 92;
+    var duration = 18 + Math.random() * 12;
+    var delay = -(Math.random() * duration);
+    var drift = (Math.random() - 0.5) * 90;
+    var spin = 220 + Math.random() * 420;
+    var size = 9 + Math.random() * 8;
+    var shade = PETAL_SHADES[index % PETAL_SHADES.length];
+
+    petal.style.left = left + '%';
+    petal.style.width = size + 'px';
+    petal.style.height = (size * 1.18) + 'px';
+    petal.style.background = shade;
+    petal.style.setProperty('--petal-drift', drift.toFixed(1) + 'px');
+    petal.style.setProperty('--petal-spin', spin.toFixed(0) + 'deg');
+    petal.style.setProperty('--petal-opacity', (0.42 + Math.random() * 0.38).toFixed(2));
+    petal.style.animationDuration = duration.toFixed(1) + 's';
+    petal.style.animationDelay = delay.toFixed(1) + 's';
+
+    container.appendChild(petal);
+  }
+
+  function startRosePetals() {
+    if (petalsStarted) return;
+    var container = document.getElementById('wed2-petals');
+    if (!container) return;
+    if (window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
+
+    petalsStarted = true;
+    container.classList.add('is-active');
+
+    for (var i = 0; i < PETAL_COUNT; i++) {
+      createRosePetal(container, i);
+    }
+  }
+
+  function scheduleHeroScrollUnlock() {
+    if (heroScrollUnlockTimer) {
+      clearTimeout(heroScrollUnlockTimer);
+      heroScrollUnlockTimer = null;
+    }
+
+    if (window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+      unlockInviteScroll();
+      return;
+    }
+
+    heroScrollUnlockTimer = setTimeout(function () {
+      heroScrollUnlockTimer = null;
+      unlockInviteScroll();
+    }, getHeroScrollUnlockMs());
+  }
+
+  function runHeroFloralReveal() {
+    if (!hero) {
+      unlockInviteScroll();
+      return;
+    }
+    lockInviteScroll();
+    hero.classList.add('is-floral-revealed');
+    scheduleHeroScrollUnlock();
+    setTimeout(runHeroBismillahIntro, BISMILLAH_INTRO_DELAY_MS);
+  }
+
+  function runHeroBismillahIntro() {
+    if (!hero) return;
+
+    if (!hasBismillahIntro()) {
+      runHeroRingIntro();
+      return;
+    }
+
+    hero.classList.add('is-intro-active');
+    if (body.classList.contains('wed2-has-hero-verse')) {
+      setTimeout(function () {
+        if (!hero) return;
+        hero.classList.add('is-verse-active');
+        setTimeout(runHeroRingIntro, HERO_VERSE_DISPLAY_MS);
+      }, BISMILLAH_ANIM_DURATION_MS);
+      return;
+    }
+    setTimeout(runHeroRingIntro, BISMILLAH_ANIM_DURATION_MS);
+  }
+
+  function runHeroRingIntro() {
+    if (!hero) return;
+    hero.classList.add('is-ring-active');
+    setTimeout(function () {
+      hero.classList.add('is-names-active');
+    }, Math.round(RING_ANIM_DURATION_MS * 0.45));
+  }
+
+  function openInvitation() {
+    if (coverOpening) return;
+    coverOpening = true;
+
+    if (envelope) envelope.classList.add('is-open');
+    if (saveDateBtn) saveDateBtn.classList.add('is-falling');
+    if (tassel) {
+      tassel.classList.remove('is-dragging', 'is-near-open');
+      tassel.classList.add('is-opening');
+    }
+
+    startMusic();
+
+    setTimeout(function () {
+      if (cover) cover.classList.add('is-fading');
+      if (sessionCover) sessionCover.classList.add('is-fading');
+      showSession(sessionInvite);
+      runHeroFloralReveal();
+    }, 700);
+
+    setTimeout(function () {
+      if (sessionCover) {
+        sessionCover.classList.remove('is-active', 'is-fading');
+        sessionCover.setAttribute('aria-hidden', 'true');
+      }
+    }, 1500);
+  }
+
+  function resetTasselPull() {
+    if (!tassel) return;
+    tassel.style.setProperty('--tassel-pull', '0px');
+    tassel.classList.remove('is-dragging', 'is-near-open');
+  }
+
+  function initTasselPull() {
+    if (!tassel) return;
+
+    var dragging = false;
+    var startY = 0;
+    var pullY = 0;
+    var activePointerId = null;
+
+    function getClientY(e) {
+      if (e.touches && e.touches.length) return e.touches[0].clientY;
+      return e.clientY;
+    }
+
+    function getOpenThresholdY() {
+      return getViewportHeight() * TASSEL_OPEN_RATIO;
+    }
+
+    function updatePull(nextPull) {
+      pullY = Math.max(0, nextPull);
+      tassel.style.setProperty('--tassel-pull', pullY + 'px');
+
+      var rect = tassel.getBoundingClientRect();
+      var nearOpen = rect.bottom >= getOpenThresholdY();
+      tassel.classList.toggle('is-near-open', nearOpen);
+
+      if (nearOpen) {
+        openInvitation();
+        endDrag(true);
+      }
+    }
+
+    function endDrag(skipSnap) {
+      dragging = false;
+      activePointerId = null;
+      if (coverOpening) return;
+      if (!skipSnap) resetTasselPull();
+    }
+
+    function onPointerDown(e) {
+      if (coverOpening) return;
+      if (e.button !== undefined && e.button !== 0) return;
+
+      primeMusicGesture();
+
+      dragging = true;
+      activePointerId = e.pointerId;
+      startY = getClientY(e);
+      pullY = 0;
+      tassel.classList.add('is-dragging');
+
+      if (tassel.setPointerCapture) {
+        try {
+          tassel.setPointerCapture(e.pointerId);
+        } catch (err) {
+          /* no-op */
+        }
+      }
+
+      e.preventDefault();
+    }
+
+    function onPointerMove(e) {
+      if (!dragging || e.pointerId !== activePointerId) return;
+
+      var dy = getClientY(e) - startY;
+      if (dy > 0) updatePull(dy);
+      e.preventDefault();
+    }
+
+    function onPointerUp(e) {
+      if (e.pointerId !== activePointerId) return;
+      endDrag(false);
+    }
+
+    tassel.addEventListener('pointerdown', onPointerDown);
+    tassel.addEventListener('pointermove', onPointerMove);
+    tassel.addEventListener('pointerup', onPointerUp);
+    tassel.addEventListener('pointercancel', onPointerUp);
+
+    tassel.addEventListener('keydown', function (e) {
+      if (coverOpening) return;
+      if (e.key === 'Enter' || e.key === ' ') {
+        e.preventDefault();
+        openInvitation();
+      }
+    });
+  }
+
+  function initCoverOpener() {
+    if (saveDateBtn) {
+      saveDateBtn.addEventListener('click', openInvitation);
+    }
+    initTasselPull();
+  }
+
+  function applyMusicVolume() {
+    if (!audio) return;
+    var volRaw = getAttr('data-music-volume', '');
+    if (!volRaw) return;
+    var vol = parseFloat(volRaw);
+    if (isNaN(vol)) return;
+    if (vol > 1) vol = vol / 100;
+    audio.volume = Math.min(1, Math.max(0, vol));
+  }
+
+  function initializeFirebaseAudio() {
+    if (!audio) return;
+    applyMusicVolume();
+    var source = audio.querySelector('source[data-storage-path]');
+    var baseUrl = window.FirebaseConfig && window.FirebaseConfig.storageBaseUrl;
+    if (!source || !baseUrl) return;
+
+    var storagePath = source.getAttribute('data-storage-path');
+    var token = source.getAttribute('data-token');
+    if (!storagePath || !token) return;
+
+    var encodedPath = storagePath.replace(/^\//, '');
+    source.src = baseUrl + encodedPath + '?alt=media&token=' + token;
+    audio.load();
+  }
+
+  function setAudioSource(song) {
+    if (!audio || !song) return;
+    var source = audio.querySelector('source');
+    if (!source) return;
+    source.setAttribute('data-storage-path', song.path);
+    source.setAttribute('data-token', song.token);
+    initializeFirebaseAudio();
+  }
+
+  function applyStyleChoice(style) {
+    var isGeneral = style === 'general';
+    body.classList.toggle('wed2-general', isGeneral);
+
+    var copy = isGeneral ? COPY_GENERAL : COPY_MUSLIM;
+    body.setAttribute('data-quote', copy.quote);
+    body.setAttribute('data-invitation-message', copy.invitationMessage);
+    body.setAttribute('data-event-1-title', copy.event1Title);
+
+    if (isGeneral) {
+      body.setAttribute('data-groom-name', 'James');
+      body.setAttribute('data-bride-name', 'Serin');
+      body.removeAttribute('data-groom-display-name');
+      body.removeAttribute('data-bride-display-name');
+      document.title = 'James & Serin — Wedding Invitation';
+    } else {
+      body.setAttribute('data-groom-name', 'Imtiyaz');
+      body.setAttribute('data-bride-name', 'Aalia');
+      body.removeAttribute('data-groom-display-name');
+      body.removeAttribute('data-bride-display-name');
+      document.title = 'Imtiyaz & Aalia — Wedding Invitation';
+    }
+
+    setAudioSource(isGeneral ? SONG_GENERAL : SONG_MUSLIM);
+    hydrate();
+  }
+
+  function dismissStylePicker() {
+    if (!stylePicker) return;
+    stylePicker.classList.remove('is-active');
+    stylePicker.setAttribute('aria-hidden', 'true');
+  }
+
+  function initStylePicker(onReady) {
+    if (!stylePicker || getAttr('data-style-picker', '') !== 'true') {
+      if (typeof onReady === 'function') onReady();
+      return;
+    }
+
+    var buttons = stylePicker.querySelectorAll('[data-style]');
+    buttons.forEach(function (btn) {
+      btn.addEventListener('click', function () {
+        applyStyleChoice(btn.getAttribute('data-style'));
+        dismissStylePicker();
+        if (typeof onReady === 'function') onReady();
+      });
+    });
+  }
+
+  function showMuteButton(show) {
+    if (!muteBtn) return;
+    muteBtn.classList.toggle('is-visible', show);
+    if (show) muteBtn.removeAttribute('aria-hidden');
+    else muteBtn.setAttribute('aria-hidden', 'true');
+  }
+
+  function primeMusicGesture() {
+    if (!audio || musicGesturePrimed) return;
+    musicGesturePrimed = true;
+    applyMusicVolume();
+
+    var wasMuted = audio.muted;
+    audio.muted = true;
+    var playPromise = audio.play();
+    if (!playPromise || typeof playPromise.then !== 'function') {
+      audio.muted = wasMuted;
+      return;
+    }
+
+    playPromise.then(function () {
+      if (!coverOpening) {
+        audio.pause();
+        audio.currentTime = 0;
+      }
+      audio.muted = wasMuted;
+    }).catch(function () {
+      audio.muted = wasMuted;
+    });
+  }
+
+  function startMusic() {
+    if (!audio) return;
+    musicGesturePrimed = true;
+    applyMusicVolume();
+    audio.muted = false;
+    audio.play().catch(function () {});
+    showMuteButton(true);
+  }
+
+  function initMute() {
+    if (!muteBtn || !audio) return;
+    muteBtn.addEventListener('click', function () {
+      audio.muted = !audio.muted;
+      muteBtn.textContent = audio.muted ? '🔇' : '🔊';
+      muteBtn.setAttribute('aria-label', audio.muted ? 'Unmute music' : 'Mute music');
+    });
+  }
+
+  function hydrateTimeline() {
+    if (getAttr('data-timeline-custom', '') === 'true') return;
+
+    for (var i = 1; i <= 4; i++) {
+      var title = getAttr('data-event-' + i + '-title', '');
+      var time = getAttr('data-event-' + i + '-time', '');
+      var dateRaw = getAttr('data-event-' + i + '-date', '');
+      var timeDisplay = time;
+
+      if (dateRaw) {
+        var dateStr = formatLongDate(dateRaw);
+        timeDisplay = dateStr + (time ? ' — ' + time : '');
+      }
+
+      setText('wed2-event-' + i + '-title', title);
+      if (body.classList.contains('wed2-details-time-single-line') && (time || dateRaw)) {
+        setHtml('wed2-event-' + i + '-time', buildTimelineTimeDisplay(dateRaw, time));
+      } else {
+        setText('wed2-event-' + i + '-time', timeDisplay);
+      }
+
+      var item = document.querySelector('.wed2-timeline-item[data-slot="' + i + '"]');
+      if (item) {
+        if (!title && !time && !dateRaw) {
+          item.classList.add('is-hidden');
+        } else {
+          item.classList.remove('is-hidden');
+        }
+      }
+    }
+  }
+
+  function hydratePolaroids() {
+    var countRaw = parseInt(getAttr('data-polaroid-count', '4'), 10);
+    var count = isNaN(countRaw) ? 4 : Math.min(4, Math.max(0, countRaw));
+
+    for (var i = 1; i <= 4; i++) {
+      var hang = document.querySelector('.wed2-polaroid-hang[data-slot="' + i + '"]');
+      if (!hang) continue;
+
+      if (i > count) {
+        hang.classList.add('is-hidden');
+        continue;
+      }
+
+      hang.classList.remove('is-hidden');
+      setText('wed2-polaroid-' + i + '-caption', getAttr('data-polaroid-' + i + '-caption', ''));
+    }
+
+    var row = document.getElementById('wed2-polaroid-row');
+    if (row && count === 0) row.classList.add('is-hidden');
+    else if (row) row.classList.remove('is-hidden');
+
+    updatePolaroidThreads();
+  }
+
+  function ensureThreadGradient(svg) {
+    if (!svg || svg.querySelector('#wed2-thread-gradient')) return;
+    var defs = document.createElementNS('http://www.w3.org/2000/svg', 'defs');
+    var gradient = document.createElementNS('http://www.w3.org/2000/svg', 'linearGradient');
+    gradient.setAttribute('id', 'wed2-thread-gradient');
+    gradient.setAttribute('x1', '0');
+    gradient.setAttribute('y1', '0');
+    gradient.setAttribute('x2', '0');
+    gradient.setAttribute('y2', '1');
+
+    var stopA = document.createElementNS('http://www.w3.org/2000/svg', 'stop');
+    stopA.setAttribute('offset', '0%');
+    stopA.setAttribute('stop-color', '#7a1f38');
+    var stopB = document.createElementNS('http://www.w3.org/2000/svg', 'stop');
+    stopB.setAttribute('offset', '100%');
+    stopB.setAttribute('stop-color', '#5a1528');
+
+    gradient.appendChild(stopA);
+    gradient.appendChild(stopB);
+    defs.appendChild(gradient);
+    svg.appendChild(defs);
+  }
+
+  function updatePolaroidThreads() {
+    var stage = document.getElementById('wed2-counter-stage');
+    var svg = document.getElementById('wed2-polaroid-threads');
+    if (!stage || !svg) return;
+
+    var hangs = stage.querySelectorAll('.wed2-polaroid-hang:not(.is-hidden)');
+    var stageRect = stage.getBoundingClientRect();
+    if (!stageRect.width || !hangs.length) {
+      svg.querySelectorAll('.wed2-polaroid-thread-line').forEach(function (line) { line.remove(); });
+      return;
+    }
+
+    svg.setAttribute('width', String(stageRect.width));
+    svg.setAttribute('height', String(stageRect.height));
+    svg.setAttribute('viewBox', '0 0 ' + stageRect.width + ' ' + stageRect.height);
+    ensureThreadGradient(svg);
+
+    svg.querySelectorAll('.wed2-polaroid-thread-line').forEach(function (line) { line.remove(); });
+
+    hangs.forEach(function (hang) {
+      var counterId = hang.getAttribute('data-counter-id');
+      var counter = counterId ? document.getElementById(counterId) : null;
+      var swing = hang.querySelector('.wed2-polaroid-swing');
+      if (!counter || !swing) return;
+
+      var counterRect = counter.getBoundingClientRect();
+      var swingRect = swing.getBoundingClientRect();
+      var x0 = counterRect.left + counterRect.width / 2 - stageRect.left;
+      var y0 = counterRect.bottom - stageRect.top - 2;
+      var x1 = swingRect.left + swingRect.width / 2 - stageRect.left;
+      var y1 = swingRect.top - stageRect.top + 2;
+
+      var line = document.createElementNS('http://www.w3.org/2000/svg', 'line');
+      line.setAttribute('class', 'wed2-polaroid-thread-line');
+      line.setAttribute('x1', String(x0));
+      line.setAttribute('y1', String(y0));
+      line.setAttribute('x2', String(x1));
+      line.setAttribute('y2', String(y1));
+      svg.appendChild(line);
+    });
+  }
+
+  function stopPolaroidThreadLoop() {
+    if (polaroidThreadRaf) {
+      cancelAnimationFrame(polaroidThreadRaf);
+      polaroidThreadRaf = null;
+    }
+  }
+
+  function startPolaroidThreadLoop() {
+    stopPolaroidThreadLoop();
+    function loop() {
+      var countdown = document.getElementById('wed2-countdown-section');
+      if (!countdown || !countdown.classList.contains('is-swinging')) {
+        polaroidThreadRaf = null;
+        return;
+      }
+      updatePolaroidThreads();
+      polaroidThreadRaf = requestAnimationFrame(loop);
+    }
+    polaroidThreadRaf = requestAnimationFrame(loop);
+  }
+
+  function startPolaroidSwing(countdownEl) {
+    if (!countdownEl) return;
+    updatePolaroidThreads();
+
+    if (window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+      return;
+    }
+
+    setTimeout(function () {
+      countdownEl.classList.add('is-swinging');
+      startPolaroidThreadLoop();
+    }, 900);
+  }
+
+  function initPolaroidThreads() {
+    if (polaroidThreadsInit) return;
+    polaroidThreadsInit = true;
+
+    window.addEventListener('resize', updatePolaroidThreads);
+    document.querySelectorAll('.wed2-polaroid-img img').forEach(function (img) {
+      if (!img.complete) {
+        img.addEventListener('load', updatePolaroidThreads);
+      }
+    });
+  }
+
+  function onCountdownRevealed(countdownEl) {
+    updatePolaroidThreads();
+    startPolaroidSwing(countdownEl);
+  }
+
+  function decodedStoragePath(attr) {
+    if (!attr) return '';
+    var raw = attr.replace(/^\//, '');
+    try {
+      return decodeURIComponent(raw);
+    } catch (e) {
+      return raw.replace(/%2F/g, '/');
+    }
+  }
+
+  function encodedStoragePath(attr) {
+    return attr ? attr.replace(/^\//, '') : '';
+  }
+
+  function resolvePathOnlyImageUrl(storagePath, baseUrl, cb) {
+    var path = decodedStoragePath(storagePath);
+    var encoded = encodedStoragePath(storagePath);
+    var bucket = 'my-bel0ved.firebasestorage.app';
+
+    function setUrl(url) {
+      if (url && typeof cb === 'function') cb(url);
+    }
+
+    function tryPublicMedia() {
+      if (baseUrl) setUrl(baseUrl + encoded + '?alt=media');
+    }
+
+    function tryRestFallback() {
+      fetch('https://firebasestorage.googleapis.com/v0/b/' + bucket + '/o/' + encoded)
+        .then(function (r) { return r.json(); })
+        .then(function (data) {
+          var token = data && (data.downloadTokens || (data.metadata && data.metadata.firebaseStorageDownloadTokens));
+          if (token) setUrl(baseUrl + encoded + '?alt=media&token=' + token);
+          else tryPublicMedia();
+        })
+        .catch(function () { tryPublicMedia(); });
+    }
+
+    function trySdk() {
+      if (!window.FirebaseStorage || !window.FirebaseStorage.getDownloadUrlByPath) {
+        tryRestFallback();
+        return;
+      }
+      window.FirebaseStorage.getDownloadUrlByPath(path)
+        .then(function (url) {
+          if (url) setUrl(url);
+          else tryRestFallback();
+        })
+        .catch(function () { tryRestFallback(); });
+    }
+
+    trySdk();
+    setTimeout(trySdk, 300);
+    setTimeout(trySdk, 700);
+    setTimeout(trySdk, 1500);
+  }
+
+  var wed2ImageInitDone = false;
+
+  function initializeFirebaseImages() {
+    var baseUrl = window.FirebaseConfig && window.FirebaseConfig.storageBaseUrl;
+    if (!baseUrl || wed2ImageInitDone) return;
+    wed2ImageInitDone = true;
+
+    document.querySelectorAll('img[data-storage-path]').forEach(function (img) {
+      var storagePath = img.getAttribute('data-storage-path');
+      if (!storagePath) return;
+
+      var token = img.getAttribute('data-token');
+      if (token) {
+        img.src = baseUrl + encodedStoragePath(storagePath) + '?alt=media&token=' + token;
+        return;
+      }
+
+      resolvePathOnlyImageUrl(storagePath, baseUrl, function (url) {
+        img.src = url;
+      });
+    });
+  }
+
+  function tryInitFirebaseImages() {
+    if (!window.FirebaseConfig || !window.FirebaseConfig.storageBaseUrl) return false;
+    initializeFirebaseImages();
+    return true;
+  }
+
+  function runFirebaseImageInit() {
+    if (tryInitFirebaseImages()) return;
+    var checkFirebase = setInterval(function () {
+      if (tryInitFirebaseImages()) clearInterval(checkFirebase);
+    }, 100);
+    setTimeout(function () { clearInterval(checkFirebase); }, 12000);
+  }
+
+  function hydrate() {
+    var groomName = getAttr('data-groom-name', '');
+    var brideName = getAttr('data-bride-name', '');
+    var groomDisplay = getAttr('data-groom-display-name', groomName);
+    var brideDisplay = getAttr('data-bride-display-name', brideName);
+    var sharedParentPrefix = getAttr('data-parent-prefix', '');
+    var sharedParentsName = getAttr('data-parents-name', '');
+
+    setText('wed2-quote-text', getAttr('data-quote', ''));
+    setText('wed2-invitation-message', getAttr('data-invitation-message', ''));
+    setText('wed2-groom-name', groomDisplay);
+    setText('wed2-bride-name', brideDisplay);
+    setText('wed2-details-groom-name', groomName);
+    setText('wed2-details-bride-name', brideName);
+    setText('wed2-details-groom-prefix', getAttr('data-groom-parent-prefix', sharedParentPrefix));
+    setHtml('wed2-details-groom-parents', formatParentsName(getAttr('data-groom-parents-name', sharedParentsName)));
+    setText('wed2-details-bride-prefix', getAttr('data-bride-parent-prefix', sharedParentPrefix));
+    setHtml('wed2-details-bride-parents', formatParentsName(getAttr('data-bride-parents-name', sharedParentsName)));
+
+    var eventTime = getAttr('data-event-time', '11:00 AM - 6:00 PM');
+    var nikahVenue = getAttr('data-nikah-venue', '');
+    var receptionVenue = getAttr('data-reception-venue', '');
+    var splitDetails =
+      body.getAttribute('data-details-split-schedule') === 'true' ||
+      (nikahVenue && receptionVenue);
+
+    var schedule1 = '';
+    var schedule2 = '';
+    var scratchNikahOnly = body.getAttribute('data-scratch-nikah-only') === 'true';
+    if (splitDetails) {
+      var includeDateInSchedule = hasPerEventDates();
+      schedule1 = buildScheduleLine(1, 'Nikah', includeDateInSchedule);
+      schedule2 = buildScheduleLine(2, 'Reception', includeDateInSchedule);
+      var detailsSchedule1 = schedule1;
+      var detailsSchedule2 = schedule2;
+      if (body.classList.contains('wed2-details-time-single-line') && includeDateInSchedule) {
+        detailsSchedule1 = buildDetailsScheduleLine(1, 'Nikah', true);
+        detailsSchedule2 = buildDetailsScheduleLine(2, 'Reception', true);
+      }
+      if (!scratchNikahOnly) {
+        var scratchSchedule1 = buildScratchScheduleLine(1, 'Nikah', includeDateInSchedule);
+        var scratchSchedule2 = buildScratchScheduleLine(2, 'Reception', includeDateInSchedule);
+        setHtml(
+          'wed2-scratch-time',
+          '<span class="wed2-scratch-time-line">' + scratchSchedule1 + '</span>' +
+          '<span class="wed2-scratch-time-line">' + scratchSchedule2 + '</span>'
+        );
+        var scratchTimeEl = document.getElementById('wed2-scratch-time');
+        if (scratchTimeEl) scratchTimeEl.classList.add('wed2-scratch-time-multiline');
+      } else {
+        setText('wed2-scratch-time', getAttr('data-event-1-time', ''));
+      }
+    } else {
+      setText('wed2-scratch-time', eventTime.replace(' - ', ' — '));
+    }
+
+    var scratchTimeOverride = getAttr('data-scratch-time', '');
+    if (scratchTimeOverride) {
+      setText('wed2-scratch-time', scratchTimeOverride);
+      var scratchTimeOverrideEl = document.getElementById('wed2-scratch-time');
+      if (scratchTimeOverrideEl) scratchTimeOverrideEl.classList.remove('wed2-scratch-time-multiline');
+    }
+
+    var mapAddress = receptionVenue || nikahVenue || getAttr('data-event-address', '');
+    if (!document.getElementById('wed2-nikah-address-text')) {
+      setText('wed2-address-text', mapAddress);
+    }
+
+    if (nikahVenue && receptionVenue) {
+      setHtml(
+        'wed2-details-venue',
+        '<span class="wed2-details-subline">' + getAttr('data-event-1-title', 'Nikah') + ' — ' + nikahVenue + '</span>' +
+        '<span class="wed2-details-subline">' + getAttr('data-event-2-title', 'Reception') + ' — ' + receptionVenue + '</span>'
+      );
+      var venueEl = document.getElementById('wed2-details-venue');
+      if (venueEl) venueEl.classList.add('wed2-details-value-multiline');
+    } else {
+      setText('wed2-details-venue', getAttr('data-event-address', ''));
+    }
+
+    var dateRaw = getAttr('data-event-date', '2026-08-15');
+    var event1DateRaw = getAttr('data-event-1-date', '');
+    var event2DateRaw = getAttr('data-event-2-date', '');
+    var dualScratchDates =
+      splitDetails &&
+      event1DateRaw &&
+      event2DateRaw &&
+      event1DateRaw !== event2DateRaw;
+    var scratchDateRaw = getAttr('data-scratch-date', '') || event1DateRaw || dateRaw;
+    var eventDate = new Date(scratchDateRaw + 'T00:00:00');
+    if (dualScratchDates || !isNaN(eventDate.getTime())) {
+      var detailsDate = formatLongDate(dateRaw);
+      var scratchDayEl = document.getElementById('wed2-scratch-day');
+
+      if (dualScratchDates) {
+        var scratchD1 = new Date(event1DateRaw + 'T00:00:00');
+        var scratchD2 = new Date(event2DateRaw + 'T00:00:00');
+        var scratchMonthLabel;
+
+        if (
+          scratchD1.getMonth() === scratchD2.getMonth() &&
+          scratchD1.getFullYear() === scratchD2.getFullYear()
+        ) {
+          scratchMonthLabel = scratchD1.toLocaleDateString('en-GB', { month: 'long' }).toUpperCase();
+        } else {
+          scratchMonthLabel =
+            scratchD1.toLocaleDateString('en-GB', { month: 'long' }).toUpperCase() +
+            ' — ' +
+            scratchD2.toLocaleDateString('en-GB', { month: 'long' }).toUpperCase();
+        }
+
+        setText('wed2-scratch-month', scratchMonthLabel);
+        setHtml(
+          'wed2-scratch-day',
+          formatScratchWeekdayDay(event1DateRaw) +
+            ' <span class="wed2-scratch-day-amp">&amp;</span> ' +
+            formatScratchWeekdayDay(event2DateRaw)
+        );
+        if (scratchDayEl) scratchDayEl.classList.add('wed2-scratch-day-dual');
+        setText('wed2-scratch-year', String(scratchD2.getFullYear()));
+      } else {
+        setText(
+          'wed2-scratch-month',
+          eventDate.toLocaleDateString('en-GB', { month: 'long' }).toUpperCase()
+        );
+        setText(
+          'wed2-scratch-day',
+          eventDate.toLocaleDateString('en-GB', { weekday: 'long' }) + ', ' + eventDate.getDate()
+        );
+        if (scratchDayEl) scratchDayEl.classList.remove('wed2-scratch-day-dual');
+        setText('wed2-scratch-year', String(eventDate.getFullYear()));
+      }
+
+      if (splitDetails) {
+        if (hasPerEventDates()) {
+          setHtml(
+            'wed2-details-datetime',
+            '<span class="wed2-details-subline">' + detailsSchedule1 + '</span>' +
+            '<span class="wed2-details-subline">' + detailsSchedule2 + '</span>'
+          );
+        } else {
+          setHtml(
+            'wed2-details-datetime',
+            detailsDate + '<br>' +
+            '<span class="wed2-details-subline">' + detailsSchedule1 + '</span>' +
+            '<span class="wed2-details-subline">' + detailsSchedule2 + '</span>'
+          );
+        }
+        var datetimeEl = document.getElementById('wed2-details-datetime');
+        if (datetimeEl) datetimeEl.classList.add('wed2-details-value-multiline');
+      } else {
+        setText('wed2-details-datetime', detailsDate + ' at ' + eventTime.replace(' - ', ' — '));
+      }
+    } else if (splitDetails) {
+      setHtml(
+        'wed2-details-datetime',
+        '<span class="wed2-details-subline">' + detailsSchedule1 + '</span>' +
+        '<span class="wed2-details-subline">' + detailsSchedule2 + '</span>'
+      );
+    } else {
+      setText('wed2-details-datetime', eventTime.replace(' - ', ' — '));
+    }
+
+    var mapLink = document.getElementById('wed2-map-link');
+    if (mapLink) mapLink.href = getAttr('data-map-link', '#');
+
+    var coupleImg = document.getElementById('wed2-hero-couple');
+    if (coupleImg && !coupleImg.hasAttribute('data-storage-path')) {
+      coupleImg.src = getAttr('data-couple-photo', 'red-gAndb.png');
+    }
+
+    hydrateTimeline();
+    hydratePolaroids();
+    applyCoverMonogram();
+    applyScratchSectionTitle();
+    initHeroScrollHint();
+    applyBrideFirstOrder();
+    hydrateDualMaps();
+  }
+
+  function initScrollReveals() {
+    var sections = document.querySelectorAll('.wed2-reveal');
+    if (!sections.length) return;
+
+    if (!('IntersectionObserver' in window)) {
+      sections.forEach(function (el) {
+        el.classList.add('is-visible');
+        if (el.id === 'wed2-countdown-section') onCountdownRevealed(el);
+      });
+      return;
+    }
+
+    var observer = new IntersectionObserver(
+      function (entries) {
+        entries.forEach(function (entry) {
+          if (entry.isIntersecting) {
+            entry.target.classList.add('is-visible');
+            observer.unobserve(entry.target);
+
+            if (entry.target.id === 'wed2-map-section') {
+              loadMapIframe();
+            }
+
+            if (entry.target.id === 'wed2-countdown-section') {
+              onCountdownRevealed(entry.target);
+            }
+          }
+        });
+      },
+      { root: sessionInvite, rootMargin: '0px 0px -40px 0px', threshold: 0.12 }
+    );
+
+    sections.forEach(function (el) { observer.observe(el); });
+  }
+
+  function loadMapIframe() {
+    if (!mapLoaded && mapIframe) {
+      var embedUrl = getAttr('data-map-embed', '');
+      if (embedUrl) {
+        mapIframe.src = embedUrl;
+        mapLoaded = true;
+      }
+    }
+
+    var nikahIframe = document.getElementById('wed2-map-nikah-iframe');
+    if (!nikahMapLoaded && nikahIframe) {
+      var nikahEmbed = getAttr('data-nikah-map-embed', '');
+      if (nikahEmbed) {
+        nikahIframe.src = nikahEmbed;
+        nikahMapLoaded = true;
+      }
+    }
+
+    var walimaIframe = document.getElementById('wed2-map-walima-iframe');
+    if (!walimaMapLoaded && walimaIframe) {
+      var walimaEmbed = getAttr('data-walima-map-embed', '');
+      if (walimaEmbed) {
+        walimaIframe.src = walimaEmbed;
+        walimaMapLoaded = true;
+      }
+    }
+  }
+
+  function drawScratchOverlay(ctx, width, height) {
+    var gradient = ctx.createLinearGradient(0, 0, width, height);
+    gradient.addColorStop(0, '#f0dcc8');
+    gradient.addColorStop(0.32, '#ddb896');
+    gradient.addColorStop(0.62, '#c9937a');
+    gradient.addColorStop(1, '#a86b5e');
+    ctx.fillStyle = gradient;
+    ctx.fillRect(0, 0, width, height);
+
+    ctx.fillStyle = 'rgba(255, 248, 240, 0.28)';
+    for (var i = 0; i < 90; i++) {
+      ctx.fillRect(
+        Math.random() * width,
+        Math.random() * height,
+        Math.random() * 3 + 1,
+        Math.random() * 3 + 1
+      );
+    }
+
+    ctx.fillStyle = 'rgba(107, 29, 50, 0.1)';
+    for (var j = 0; j < 40; j++) {
+      ctx.fillRect(
+        Math.random() * width,
+        Math.random() * height,
+        Math.random() * 2 + 0.5,
+        Math.random() * 2 + 0.5
+      );
+    }
+
+    ctx.font = '600 14px Nunito, sans-serif';
+    ctx.fillStyle = 'rgba(107, 29, 50, 0.78)';
+    ctx.textAlign = 'center';
+    ctx.textBaseline = 'middle';
+    ctx.fillText('Scratch here', width / 2, height / 2);
+  }
+
+  function initScratchCard() {
+    if (!scratchCanvas || !scratchCard) return;
+    var scratchSection = document.getElementById('wed2-scratch-section');
+    var scratchBurst = document.getElementById('wed2-scratch-burst');
+
+    if (body.getAttribute('data-scratch-revealed') === 'true') {
+      scratchCard.classList.add('is-revealed');
+      if (scratchSection) {
+        scratchSection.classList.add('is-revealed-static');
+        var hint = scratchSection.querySelector('.wed2-scratch-hint');
+        if (hint) hint.hidden = true;
+      }
+      return;
+    }
+
+    var ctx = scratchCanvas.getContext('2d');
+    if (!ctx) {
+      if (revealBtn) {
+        revealBtn.hidden = false;
+        revealBtn.addEventListener('click', function () {
+          scratchCard.classList.add('is-revealed');
+          if (scratchSection) scratchSection.classList.add('is-splashed');
+          launchScratchPoppers();
+        });
+      }
+      return;
+    }
+    var isDrawing = false;
+    var revealed = false;
+    var brushRadius = 22;
+
+    function resizeCanvas() {
+      var measureEl = scrollPanel || scratchCard;
+      var rect = measureEl.getBoundingClientRect();
+      var dpr = window.devicePixelRatio || 1;
+      scratchCanvas.width = rect.width * dpr;
+      scratchCanvas.height = rect.height * dpr;
+      scratchCanvas.style.width = rect.width + 'px';
+      scratchCanvas.style.height = rect.height + 'px';
+      ctx.setTransform(dpr, 0, 0, dpr, 0, 0);
+      drawScratchOverlay(ctx, rect.width, rect.height);
+    }
+
+    function getPos(e) {
+      var rect = scratchCanvas.getBoundingClientRect();
+      var clientX = e.touches ? e.touches[0].clientX : e.clientX;
+      var clientY = e.touches ? e.touches[0].clientY : e.clientY;
+      return {
+        x: clientX - rect.left,
+        y: clientY - rect.top
+      };
+    }
+
+    function scratch(x, y) {
+      ctx.globalCompositeOperation = 'destination-out';
+      ctx.beginPath();
+      ctx.arc(x, y, brushRadius, 0, Math.PI * 2);
+      ctx.fill();
+    }
+
+    function getClearedPercent() {
+      var w = scratchCanvas.width;
+      var h = scratchCanvas.height;
+      var imageData = ctx.getImageData(0, 0, w, h);
+      var pixels = imageData.data;
+      var total = pixels.length / 4;
+      var cleared = 0;
+      var step = 8;
+
+      for (var i = 3; i < pixels.length; i += 4 * step) {
+        if (pixels[i] === 0) cleared++;
+      }
+
+      return cleared / (total / step);
+    }
+
+    function launchScratchPoppers() {
+      if (!scratchBurst) return;
+
+      scratchBurst.classList.add('is-active');
+      scratchBurst.innerHTML = '';
+
+      var colors = ['wed2-popper-red', 'wed2-popper-gold', 'wed2-popper-blush'];
+      var countPerSide = 24;
+
+      function addPiece(fromLeft) {
+        var piece = document.createElement('div');
+        piece.className = 'wed2-popper ' + colors[Math.floor(Math.random() * colors.length)];
+
+        var startPercent = fromLeft
+          ? (3 + Math.random() * 18)
+          : (79 + Math.random() * 18);
+        var driftX = fromLeft
+          ? (30 + Math.random() * 120)
+          : -(30 + Math.random() * 120);
+
+        piece.style.left = startPercent.toFixed(2) + '%';
+        piece.style.animationDelay = (Math.random() * 0.45).toFixed(2) + 's';
+        piece.style.animationDuration = (2.9 + Math.random() * 1.9).toFixed(2) + 's';
+        piece.style.width = (5 + Math.random() * 10).toFixed(2) + 'px';
+        piece.style.height = (8 + Math.random() * 14).toFixed(2) + 'px';
+        piece.style.setProperty('--wed2-drift-x', driftX.toFixed(2) + 'px');
+        piece.style.setProperty('--wed2-twist', (Math.random() * 720 - 360).toFixed(2) + 'deg');
+        scratchBurst.appendChild(piece);
+      }
+
+      for (var i = 0; i < countPerSide; i++) {
+        addPiece(true);
+        addPiece(false);
+      }
+
+      setTimeout(function () {
+        scratchBurst.classList.remove('is-active');
+        scratchBurst.innerHTML = '';
+      }, 5600);
+    }
+
+    function checkReveal() {
+      if (revealed) return;
+      if (getClearedPercent() >= 0.42) {
+        revealed = true;
+        scratchCard.classList.add('is-revealed');
+        if (scratchSection) scratchSection.classList.add('is-splashed');
+        launchScratchPoppers();
+      }
+    }
+
+    function onStart(e) {
+      if (revealed) return;
+      isDrawing = true;
+      var pos = getPos(e);
+      scratch(pos.x, pos.y);
+      e.preventDefault();
+    }
+
+    function onMove(e) {
+      if (!isDrawing || revealed) return;
+      var pos = getPos(e);
+      scratch(pos.x, pos.y);
+      checkReveal();
+      e.preventDefault();
+    }
+
+    function onEnd() {
+      if (isDrawing) checkReveal();
+      isDrawing = false;
+    }
+
+    resizeCanvas();
+    window.addEventListener('resize', resizeCanvas);
+
+    scratchCanvas.addEventListener('mousedown', onStart);
+    scratchCanvas.addEventListener('mousemove', onMove);
+    scratchCanvas.addEventListener('mouseup', onEnd);
+    scratchCanvas.addEventListener('mouseleave', onEnd);
+    scratchCanvas.addEventListener('touchstart', onStart, { passive: false });
+    scratchCanvas.addEventListener('touchmove', onMove, { passive: false });
+    scratchCanvas.addEventListener('touchend', onEnd);
+  }
+
+  function startCountdown() {
+    if (!countdownEls.days) return;
+
+    var dateRaw = getEventDateRaw(1) || getAttr('data-event-date', '2026-08-15');
+    var eventTimeRaw = getAttr('data-event-1-time', '') || getAttr('data-event-time', '11:00 AM - 6:00 PM');
+    var timeStart = eventTimeRaw.split('-')[0].trim();
+    var dateTime = new Date(dateRaw + ' ' + timeStart);
+
+    if (isNaN(dateTime.getTime())) {
+      dateTime = new Date(dateRaw + 'T11:00:00');
+    }
+
+    function tick() {
+      var now = new Date().getTime();
+      var diff = dateTime.getTime() - now;
+
+      if (diff <= 0) {
+        countdownEls.days.textContent = '0';
+        countdownEls.hours.textContent = '0';
+        countdownEls.minutes.textContent = '0';
+        countdownEls.seconds.textContent = '0';
+        return;
+      }
+
+      var dayMs = 24 * 60 * 60 * 1000;
+      var hourMs = 60 * 60 * 1000;
+      var minuteMs = 60 * 1000;
+
+      countdownEls.days.textContent = String(Math.floor(diff / dayMs));
+      countdownEls.hours.textContent = String(Math.floor((diff % dayMs) / hourMs));
+      countdownEls.minutes.textContent = String(Math.floor((diff % hourMs) / minuteMs));
+      countdownEls.seconds.textContent = String(Math.floor((diff % minuteMs) / 1000));
+    }
+
+    tick();
+    setInterval(tick, 1000);
+  }
+
+  hydrate();
+  initializeFirebaseAudio();
+  runFirebaseImageInit();
+  initPolaroidThreads();
+  initCoverOpener();
+  initMute();
+  startCountdown();
+  showMuteButton(false);
+  initStylePicker(function () {
+    showSession(sessionCover);
+  });
+})();
+  </script>
+</body>
+</html>
