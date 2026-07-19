@@ -3294,6 +3294,34 @@ body.wed2-ring-names-center .wed2-ring-name-bride {
     margin-top: 2.5rem !important;
   }
 }
+
+/* Wedding Calendar Section Styles */
+.wed2-date-panel { display: grid; justify-items: center; text-align: center; color: var(--wed2-text); width: 100%; margin-top: 10px; }
+.wed2-calendar-month { 
+  font-size: 1.4rem;
+    margin-bottom: 20px;
+    text-transform: uppercase;
+    letter-spacing: 0.3em;
+    color: #ffffff;
+    font-weight: 600 !important;
+ }
+.wed2-calendar { display: grid; grid-template-columns: repeat(7, 1fr); gap: 15px; width: 100%; max-width: 400px; }
+.wed2-calendar-day { display: grid; justify-items: center; height: 50px; position: relative; }
+.wed2-calendar-dayname { font-style: italic; color: var(--wed2-red-soft); font-size: 0.8rem; }
+.wed2-calendar-number-wrap { position: relative; width: 30px; height: 30px; display: grid; place-items: center; }
+.wed2-calendar-number { font-size: 1.1rem; color: #ffffff; z-index: 2; transition: 0.5s; }
+
+/* The 30th (Target Date) Styling */
+.is-target .wed2-calendar-number { color: #fff; font-weight: bold; }
+.is-target .wed2-calendar-heart { 
+  position: absolute; width: 70px; height: 70px; color: var(--wed2-red);
+  animation: heartPop 0.8s cubic-bezier(0.17, 0.89, 0.32, 1.49) forwards;
+  z-index: 1; pointer-events: none;
+}
+@keyframes heartPop {
+  0% { transform: scale(0.5); opacity: 0; }
+  100% { transform: scale(1); opacity: 1; }
+}
 </style>
 
 </head>
@@ -3494,7 +3522,7 @@ body.wed2-ring-names-center .wed2-ring-name-bride {
           </section>
 
           <!-- Section C: Scratch date -->
-          <section class="wed2-section wed2-scratch wed2-reveal" id="wed2-scratch-section">
+          <!-- <section class="wed2-section wed2-scratch wed2-reveal" id="wed2-scratch-section">
             <h2 class="wed2-section-title">Save the Date</h2>
             <p class="wed2-scratch-hint">Scratch to reveal the date</p>
             <div class="wed2-scratch-burst" id="wed2-scratch-burst" aria-hidden="true"></div>
@@ -3512,6 +3540,15 @@ body.wed2-ring-names-center .wed2-ring-name-bride {
               <div class="wed2-scroll-cap wed2-scroll-cap-bottom" aria-hidden="true"></div>
             </div>
             <button type="button" class="wed2-reveal-btn" id="wed2-reveal-btn" hidden>Reveal date</button>
+          </section> -->
+
+
+          <section class="wed2-section wed2-reveal" id="wed2-calendar-section">
+            <h2 class="wed2-section-title">Save the Date</h2>
+            <div class="wed2-date-panel">
+              <p class="wed2-calendar-month">August 2026</p>
+              <div class="wed2-calendar" id="wed2-calendar"></div>
+            </div>
           </section>
 
           <!-- Section D: Full invitation details -->
@@ -5233,5 +5270,43 @@ body.wed2-ring-names-center .wed2-ring-name-bride {
   });
 })();
   </script>
+
+<script>
+  // Add this inside your existing main script
+  function generateCalendar(year, month, startDay, endDay, targetDay) {
+    const calendarEl = document.getElementById('wed2-calendar');
+    if (!calendarEl) return;
+    const days = ['S', 'M', 'T', 'W', 'T', 'F', 'S'];
+    
+    days.forEach(day => {
+      const div = document.createElement('div');
+      div.className = 'wed2-calendar-dayname';
+      div.textContent = day;
+      calendarEl.appendChild(div);
+    });
+
+    const startOffset = new Date(year, month, startDay).getDay();
+    for (let i = 0; i < startOffset; i++) calendarEl.appendChild(document.createElement('div'));
+
+    for (let i = startDay; i <= endDay; i++) {
+      const dayEl = document.createElement('div');
+      dayEl.className = 'wed2-calendar-day' + (i === targetDay ? ' is-target' : '');
+      dayEl.innerHTML = `
+        <div class="wed2-calendar-number-wrap">
+          <span class="wed2-calendar-number">${i}</span>
+          ${i === targetDay ? `<div class="wed2-calendar-heart">
+            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"/></svg>
+          </div>` : ''}
+        </div>
+      `;
+      calendarEl.appendChild(dayEl);
+    }
+  }
+
+  // Initialize after the page loads
+  window.addEventListener('load', function() {
+    generateCalendar(2026, 7, 16, 31, 30);
+  });
+</script>
 </body>
 </html>
